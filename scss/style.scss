@@ -1,0 +1,66 @@
+/*
+Theme Name: Kinder Foundation
+Theme URI: http://underscores.me/
+Author: CORE Design Studio, Sebastian Civarolo
+Author URI: http://www.coredesignstudio.com
+Description: Theme for Kinder Foundation move to wordpress and responsivising.
+Version: 2.0
+Text Domain: Inprint
+
+Kinder Foundation is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------
+SASS HELPERS
+--------------------------------------------*/
+
+@import "susy";
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import "../bower_components/normalize-css/normalize";
+
+/*--------------------------------------------
+SETTINGS
+--------------------------------------------*/
+
+@import "fonts";
+
+/*------- VARIABLES -------*/
+
+@import "variables";
+
+/*------- MIXINS -------*/
+
+@import "mixins";
+
+/*--------------------------------------------
+GLOBAL STYLES
+--------------------------------------------*/
+
+/*------- GLOBAL STYLES -------*/
+
+@import "global/global";
+
+
+/*--------------------------------------------
+ELEMENTS
+--------------------------------------------*/
+
+@import "elements/elements";
+
+/*--------------------------------------------
+MODULES
+--------------------------------------------*/
+
+@import "modules/modules";
+
+/*--------------------------------------------
+LAYOUTS
+--------------------------------------------*/
+
+@import "layouts/layouts";
+

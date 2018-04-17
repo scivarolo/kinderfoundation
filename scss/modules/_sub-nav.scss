@@ -1,0 +1,32 @@
+.sub-nav{
+  background: lighten($kinder-green, 40%);
+  list-style: none;
+  text-transform: lowercase;
+  margin: 0;
+  padding: gutter(4);
+  @include breakpoint(600px) {
+    padding: gutter(12) gutter(6);
+  }
+  .label {
+    font-family: $small-caps;
+
+  }
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: $serif;
+    @include font-size(1.3);
+  }
+  a {
+    color: $kinder-gray;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $kinder-green;
+    }
+  }
+  .current_page_item a {
+    color: $kinder-red;
+    cursor: default;
+  }
+}

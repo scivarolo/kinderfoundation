@@ -1,0 +1,47 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	@include font-size(1.4);
+}
+
+th {
+	font-weight: bold;
+	@include button;
+	border-right:5px solid white;
+	&:last-of-type {
+  	border-right: none;
+	}
+}
+
+tr:nth-child(even) {
+  background-color: lighten($kinder-gray, 46%);
+}
+
+td {
+  padding: 5px;
+}
+
+.footable-filter {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+::-webkit-input-placeholder {
+   padding-left: 7px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   padding-left: 7px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   padding-left: 7px;  
+}
+
+:-ms-input-placeholder {  
+   padding-left: 7px;
+}
+
+.footable {
+  clear:both;
+}

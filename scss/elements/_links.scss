@@ -1,0 +1,142 @@
+a {
+	color: $kinder-red;
+	text-decoration: none;
+
+	&:visited {
+		color: lighten($kinder-red, 3%);
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken($kinder-red, 9%);
+		
+	}
+}
+
+a[rel=tag] {
+  color: $kinder-gray;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $kinder-red;
+  }
+}
+
+.button {
+  @include button;
+}
+
+.nav-links {
+  margin-left: gutter(4);
+
+  .nav-previous a {
+    float:left;
+    background: $kinder-green; /* fallback */
+    background: -webkit-linear-gradient(45deg, $kinder-green 7px, $kinder-green 0),
+                -webkit-linear-gradient(135deg, transparent 7px, $kinder-green 0),
+                -webkit-linear-gradient(225deg, $kinder-green 7px, $kinder-green 0),
+                -webkit-linear-gradient(315deg, $kinder-green 7px, $kinder-green 0);
+    background: -moz-linear-gradient(45deg, $kinder-green 7px, $kinder-green 0),
+                -moz-linear-gradient(135deg, transparent 7px, $kinder-green 0),
+                -moz-linear-gradient(225deg, $kinder-green 7px, $kinder-green 0),
+                -moz-linear-gradient(315deg, $kinder-green 7px, $kinder-green 0);
+    background: -o-linear-gradient(45deg, $kinder-green 7px, $kinder-green 0),
+                -o-linear-gradient(135deg, transparent 7px, $kinder-green 0),
+                -o-linear-gradient(225deg, $kinder-green 7px, $kinder-green 0),
+                -o-linear-gradient(315deg, $kinder-green 7px, $kinder-green 0);
+    background: linear-gradient(45deg, $kinder-green 7px, $kinder-green 0),
+                linear-gradient(135deg, transparent 7px, $kinder-green 0),
+                linear-gradient(225deg, $kinder-green 7px, $kinder-green 0),
+                linear-gradient(315deg, $kinder-green 7px, $kinder-green 0);
+    background-position: bottom left, top left, top right, bottom right;
+    background-size: 51% 50%;
+    background-repeat: no-repeat;
+    &:hover,
+    &:focus,
+    &:active {
+      background: darken($kinder-green, 9%);
+    	background: -webkit-linear-gradient(45deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0),
+    	            -webkit-linear-gradient(135deg, transparent 7px, darken($kinder-green, 9%) 0),
+    	            -webkit-linear-gradient(225deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0),
+    	            -webkit-linear-gradient(315deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0);
+      background: -moz-linear-gradient(45deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0),
+    	            -moz-linear-gradient(135deg, transparent 7px, darken($kinder-green, 9%) 0),
+    	            -moz-linear-gradient(225deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0),
+    	            -moz-linear-gradient(315deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0);
+      background: -o-linear-gradient(45deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0),
+    	            -o-linear-gradient(135deg, transparent 7px, darken($kinder-green, 9%) 0),
+    	            -o-linear-gradient(225deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0),
+    	            -o-linear-gradient(315deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0);
+      background: linear-gradient(45deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0),
+    	            linear-gradient(135deg, transparent 7px, darken($kinder-green, 9%) 0),
+    	            linear-gradient(225deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0),
+    	            linear-gradient(315deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 0);
+      background-position: bottom left, top left, top right, bottom right;
+    	background-size: 51% 50%;
+    	background-repeat: no-repeat;
+    }
+    
+
+  }
+  .nav-next a {
+    float:right;
+    background: $kinder-green; /* fallback */
+  	background: -webkit-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
+  	            -webkit-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
+  	            -webkit-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
+  	            -webkit-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
+    background: -moz-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
+  	            -moz-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
+  	            -moz-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
+  	            -moz-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
+    background: -o-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
+  	            -o-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
+  	            -o-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
+  	            -o-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
+    background: linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
+  	            linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
+  	            linear-gradient(225deg, transparent 7px, $kinder-green 7px),
+  	            linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
+    background-position: bottom left, top left, top right, bottom right;
+    background-size: 51% 50%;
+    background-repeat: no-repeat;
+  	&:hover,
+  	&:focus,
+  	&:active {
+      background: darken($kinder-green, 9%);
+  		background: -webkit-linear-gradient(45deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px),
+    	            -webkit-linear-gradient(135deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px),
+    	            -webkit-linear-gradient(225deg, transparent 7px, darken($kinder-green, 9%) 7px),
+    	            -webkit-linear-gradient(315deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px);
+      background: -moz-linear-gradient(45deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px),
+    	            -moz-linear-gradient(135deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px),
+    	            -moz-linear-gradient(225deg, transparent 7px, darken($kinder-green, 9%) 7px),
+    	            -moz-linear-gradient(315deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px);
+      background: -o-linear-gradient(45deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px),
+    	            -o-linear-gradient(135deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px),
+    	            -o-linear-gradient(225deg, transparent 7px, darken($kinder-green, 9%) 7px),
+    	            -o-linear-gradient(315deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px);
+      background: linear-gradient(45deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px),
+    	            linear-gradient(135deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px),
+    	            linear-gradient(225deg, transparent 7px, darken($kinder-green, 9%) 7px),
+    	            linear-gradient(315deg, darken($kinder-green, 9%) 7px, darken($kinder-green, 9%) 7px);
+      background-position: bottom left, bottom right, top right, top left;
+    	background-size: 51% 50%;
+    	background-repeat: no-repeat;
+  	}
+  }
+  a {
+    @include font-size(1.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 11px 15px 7px 15px;
+    line-height: 1;
+    color: white;
+    position:relative;
+    margin-bottom: 10px;
+    &:visited {
+    	color: white;
+    }
+
+  }
+}

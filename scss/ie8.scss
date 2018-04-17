@@ -1,0 +1,15 @@
+.lt-ie9 {
+  .main-navigation > div > ul > li:first-child + li + li {
+    margin-right: 0;
+    border-right: 5px solid white;
+  }
+  .main-navigation > div > ul > li:first-child + li > ul.sub-menu {
+    left: auto;
+    right: -5px;
+  }
+  .site-header {
+  }
+  .gift-grid li {
+    margin-right: 5px;
+  }
+}

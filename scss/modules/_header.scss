@@ -1,0 +1,217 @@
+.main-navigation {
+  @extend %container;
+  @include breakpoint(max-width 599px) {
+    position:relative;
+  }
+  > div > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include span(12 of 12);
+
+    @include breakpoint(max-width 871px) {
+      @include font-size(1.4);
+    }
+    @include breakpoint(max-width 415px ) {
+      @include font-size(1.3);
+    }
+    @include breakpoint(600px) {
+      @include span(8 of 12 last);
+    }
+    @include breakpoint(800px) {
+      @include span(6 of 12 last);
+    }  
+    > li {
+      margin: 0;
+      padding: 0;
+      @include span(4 of 12);
+      overflow:visible;
+      @include breakpoint(600px) {
+        position:relative;
+      }
+      
+      &:last-of-type {
+        @include last;
+        border-right: 5px solid white;
+      }
+      &:first-of-type {
+        border-left: 5px solid white;
+      }
+      > a {
+        @include button;
+        display:block;
+        @include breakpoint(max-width 410px) {
+          padding-left: 10px;
+          &:after {
+            background-image: none;
+          }
+        }
+      }
+      &.current-menu-item > a,
+      &.current-menu-parent > a,
+      &.current_page_parent > a,
+      &.current-page-ancestor > a {
+        background: $kinder-red;
+        background: -webkit-linear-gradient(45deg, $kinder-red 7px, $kinder-red 7px),
+      	            -webkit-linear-gradient(135deg, $kinder-red 7px, $kinder-red 7px),
+      	            -webkit-linear-gradient(225deg, transparent 7px, $kinder-red 7px),
+      	            -webkit-linear-gradient(315deg, $kinder-red 7px, $kinder-red 7px);
+        background: -moz-linear-gradient(45deg, $kinder-red 7px, $kinder-red 7px),
+      	            -moz-linear-gradient(135deg, $kinder-red 7px, $kinder-red 7px),
+      	            -moz-linear-gradient(225deg, transparent 7px, $kinder-red 7px),
+      	            -moz-linear-gradient(315deg, $kinder-red 7px, $kinder-red 7px);
+        background: -o-linear-gradient(45deg, $kinder-red 7px, $kinder-red 7px),
+      	            -o-linear-gradient(135deg, $kinder-red 7px, $kinder-red 7px),
+      	            -o-linear-gradient(225deg, transparent 7px, $kinder-red 7px),
+      	            -o-linear-gradient(315deg, $kinder-red 7px, $kinder-red 7px);
+        background: linear-gradient(45deg, $kinder-red 7px, $kinder-red 7px),
+      	            linear-gradient(135deg, $kinder-red 7px, $kinder-red 7px),
+      	            linear-gradient(225deg, transparent 7px, $kinder-red 7px),
+      	            linear-gradient(315deg, $kinder-red 7px, $kinder-red 7px);
+        background-position: bottom left, bottom right, top right, top left;
+      	background-size: 51% 50%;
+      	background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+ul.sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: -3px;
+  border: 3px solid white;
+  left: 0;
+  white-space:nowrap;
+  background-color: $kinder-gray;
+  font-size: 0;
+  li {
+    background: $kinder-gray;
+    &.current-menu-item,
+    &.current-page-ancestor {
+      background: $kinder-red;
+    }
+    //margin-right: -3px;
+    display:inline-block;
+    border-right: 3px solid white;
+    padding: 6px 14px;
+    @include font-size(1.2);
+    @include breakpoint(max-width 420px) {
+      @include font-size(1);
+      padding: 6px;  
+    }
+    &:last-of-type { border-right: none;}
+    &:hover {
+      background: $kinder-red;
+    }
+  }
+  font-family: $serif;
+  text-transform: lowercase;
+  a { color: white; }
+  
+  @include breakpoint(max-width 599px) {
+    width: 100%;
+    margin-left: 0;
+    li { 
+      width: 33.333%;
+      margin-right: 0; }
+  }
+
+}
+
+.main-navigation > div > ul > li:nth-child(2) > ul.sub-menu {
+  left: auto;
+  right: -3px;
+  @include breakpoint(max-width 599px) {
+    right: 0;
+  }
+}
+
+
+
+.sub-menu {
+  display: none;
+  .current-menu-parent &,
+  .current-menu-item &,
+  .current-page-ancestor & {
+    display: block;
+  } 
+}
+
+
+
+.site-header {   
+  //background: $kinder-green;
+  border-top: 5px solid white;
+  padding: 60px 0 20px;
+  border-bottom: 10px solid white;
+  z-index:101;
+  width:100%;
+  @include clearfix;
+  .home & {
+    @include breakpoint(600px) {
+      background: transparent;
+      position: absolute;
+    }
+  }
+}
+
+
+.kinder-logo {
+  @include breakpoint(max-width 600px) {
+    margin: 0 span(1 of 12) 0 0;
+    max-width: 100% - (span(1 of 12));
+  }
+  @include breakpoint(600px) {
+    max-width: span(7 of 12);
+  }
+  @include breakpoint(800px) {
+    max-width: span(6 of 12);
+  }
+  border-left: 5px solid $kinder-red;
+  margin-left: -5px;
+  float:left;
+  img {
+    max-width: 100%;
+    display:block;
+  }
+}
+
+.page-title {
+  float:right;
+  text-align:right;
+  text-transform: lowercase;
+  h1, h2 { color: white; }
+  margin-right: span(1 of 12);
+  margin-top: 15px;
+  @include breakpoint(540px) {
+    margin-right: gutter(6);
+  }
+  
+  @include breakpoint(600px) {
+    max-width: span(5 of 12) - gutter(6);
+  }
+  @include breakpoint(800px) {
+    max-width: span(6 of 12 last);
+  }
+  
+  h1 {
+    @include font-size(3);
+    font-weight: bold;
+    letter-spacing: 1px;
+    @include breakpoint(960px) {
+      @include font-size(3.4);
+    }
+  }
+  h2 {
+    @include font-size(1.6);
+    font-style:italic; 
+    padding-left: 15px;
+    @include breakpoint(960px) {
+      @include font-size(1.9);
+    }
+  }
+}

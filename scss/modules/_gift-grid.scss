@@ -1,0 +1,103 @@
+.gift-grid {
+  list-style: none;
+  margin: gutter(6);
+  padding: 0;
+  @include clearfix;
+  > li {
+    overflow:hidden;
+    display:block;
+    margin-bottom: gutter(6);
+    @include breakpoint(436px) {
+      @include gallery(3 of 6);
+    }
+    @include breakpoint(768px) {
+      @include gallery(4 of 12);  
+      margin-bottom: gutter(12);
+    }
+  }
+}
+
+.category-header {
+  position:relative;
+  height: 100%;
+  width: 100%;
+  div {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 15px;
+    border-left: 5px solid $kinder-green;
+  }
+  img {
+    visibility: hidden;
+    max-width: 100%;
+    display:block;
+    @include breakpoint(max-width 436px) {
+      height: 150px;
+    }
+  }
+  h2 {
+    @include font-size(3.6);
+    font-weight: bold;
+    line-height: 1.1;
+    @include breakpoint(436px 585px) {
+      @include font-size(2.8);
+    }
+    @include breakpoint(768px 850px) {
+      @include font-size(3.2);
+    }
+  }
+  h3 {
+    color: $kinder-green;
+    font-style: italic;
+    margin-top: 15px;
+    @include breakpoint(600px) {
+      margin-right: 15px;
+    }
+  }
+  h2, h3 {
+    text-transform: lowercase;
+    font-family: $serif;
+    a { color: $kinder-green; }
+  }
+}
+
+.grid-single-gift {
+  position:relative;
+  max-width: 100%;
+  .caption { 
+    position:absolute;
+    width: 100%;
+    opacity: 1;
+    bottom:0;
+    transition: all 0.25s ease-in-out;
+    background-color: $kinder-red;
+    background-color: rgba($kinder-red, 0.75);
+    z-index: 100;
+    padding: 5% 7%;
+    h3 { 
+      color: white;
+      @include font-size(1.4);
+      @include breakpoint(600px) {
+        @include font-size(1.6);
+      }
+    }
+  }
+  img {
+    max-width: 100%;
+    display:block;
+    transition: all 0.5s ease;
+  }
+}
+
+.grid-single-gift:hover {
+  img {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+    transition: all 4.5s ease;
+  }
+  .caption {
+    opacity: 1;
+   
+  }
+}

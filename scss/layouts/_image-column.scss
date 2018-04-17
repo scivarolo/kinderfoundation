@@ -1,0 +1,22 @@
+.has-image-column {
+  .page {
+    margin: gutter(4);
+    padding-right: gutter(6);
+    @include breakpoint(600px) {
+      margin: 0;
+      @include span(7 of 12 last);
+      padding-left: gutter(12); 
+    }
+  }
+}
+
+.image-column {
+  margin: gutter(4);
+  @include breakpoint(600px) {
+    margin: 0;
+    @include span(5 of 12);
+  }
+  img {
+    width: 100%;
+  }
+}

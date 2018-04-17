@@ -1,0 +1,76 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2901001, 2014-10-13T14:06:11-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Anivers-Bold by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/anivers/bold/
+ * 
+ * Webfont: Anivers-Regular by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/anivers/regular/
+ * 
+ * Webfont: AniversSC-Regular by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/anivers/sc/
+ * 
+ * Webfont: Anivers-Italic by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/anivers/italic/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2901001
+ * Licensed pageviews: 500,000
+ * Webfonts copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2c4409");
+
+  
+@font-face {
+  font-family: 'Anivers';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../webfonts/2C4409_0_0.eot');
+  src: url('../webfonts/2C4409_0_0.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/2C4409_0_0.woff') format('woff'),
+       url('../webfonts/2C4409_0_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+  font-family: 'Anivers';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../webfonts/2C4409_1_0.eot');
+  src: url('../webfonts/2C4409_1_0.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/2C4409_1_0.woff') format('woff'),
+       url('../webfonts/2C4409_1_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+  font-family: 'Anivers-SC';
+  src: url('../webfonts/2C4409_2_0.eot');
+  src: url('../webfonts/2C4409_2_0.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/2C4409_2_0.woff') format('woff'),
+       url('../webfonts/2C4409_2_0.ttf') format('truetype');
+}
+ 
+  
+@font-face {
+  font-family: 'Anivers';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../webfonts/2C4409_3_0.eot');
+  src: url('../webfonts/2C4409_3_0.eot?#iefix') format('embedded-opentype'),
+       url('../webfonts/2C4409_3_0.woff') format('woff'),
+       url('../webfonts/2C4409_3_0.ttf') format('truetype');
+}
+ 

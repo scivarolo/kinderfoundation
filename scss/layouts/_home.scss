@@ -1,0 +1,42 @@
+.slider-overlay {
+  position:absolute;
+  padding: 25px;
+  z-index: 500;
+  background: $kinder-red;
+  background-color: rgba($kinder-red, 0.75);
+  color:white;
+  font-family: $serif;
+  
+  @include font-size(1.4);
+  
+  @include breakpoint(500px) {
+    @include font-size(2);
+  }
+  @include breakpoint(680px) {
+    @include font-size(2.4);
+  }
+  @include breakpoint(800px) {
+    @include font-size(3.2);
+  }
+  bottom: 15%;
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    color: white;
+    display: inline-block;
+    border-bottom: 3px solid white;
+    transition: 0.25s all ease;
+    &:hover {
+      color: $kinder-red;
+      border-bottom-color: $kinder-red;
+      transition: 0.25s all ease;
+      background-color: rgba(white, 0.85);
+    }
+  }
+}
+
+#home-slider img {
+  display: block;
+  max-width: 100%;
+}
