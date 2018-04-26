@@ -68,6 +68,8 @@
   border-left: 5px solid white;
   padding-left: gutter(4);
   margin-top: 1em;
+  margin-bottom: 2em;
+  @include clearfix();
   @media (min-width: 720px) {
     padding-right: gutter(6);
     margin-top: 1em;

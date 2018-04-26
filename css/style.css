@@ -878,8 +878,13 @@ dd {
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
-object {
+object,
+img {
   max-width: 100%; }
+
+.wp-caption-text {
+  font-size: 13px;
+  font-size: 0.8125rem; }
 
 /*------- Table Styles -------*/
 table {
@@ -1852,7 +1857,12 @@ LAYOUTS
 .post .entry-content {
   border-left: 5px solid white;
   padding-left: 3.2258064516%;
-  margin-top: 1em; }
+  margin-top: 1em;
+  margin-bottom: 2em; }
+  .post .entry-content:after {
+    content: "";
+    display: table;
+    clear: both; }
   @media (min-width: 720px) {
     .post .entry-content {
       padding-right: 2.1276595745%;

@@ -10,6 +10,11 @@
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
-object {
+object,
+img {
 	max-width: 100%;
+}
+
+.wp-caption-text {
+  @include font-size(1.3);
 }
