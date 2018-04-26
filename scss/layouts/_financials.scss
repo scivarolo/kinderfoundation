@@ -4,10 +4,10 @@
     display:block;
     @include span(8 of 12 last);
     text-align:center;
-    @include breakpoint(max-width 600px) {
+    @media (max-width: 600px) {
       @include font-size(1.6);
     }
-    @include font-size(2); 
+    @include font-size(2);
   }
   img {
     max-width: 100%;

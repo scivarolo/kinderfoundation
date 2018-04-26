@@ -19,7 +19,7 @@
   text-align: right;
   float: right;
   @include font-size(1.2);
-  @include breakpoint( max-width 600px ) {
+  @media (max-width: 600px ) {
     width: 75%;
     text-align: left;
     float: left;
@@ -40,7 +40,7 @@
   display: block;
   float:left;
   border-right: 3px solid white;
-  @include breakpoint( max-width 600px) {
+  @media (max-width: 600px) {
     border-bottom: 3px solid white;
   }
 }

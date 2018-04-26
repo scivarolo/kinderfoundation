@@ -4,7 +4,7 @@
   text-transform: lowercase;
   margin: 0;
   padding: gutter(4);
-  @include breakpoint(600px) {
+  @media (min-width: 600px) {
     padding: gutter(12) gutter(6);
   }
   .label {

@@ -188,8 +188,8 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0; }
 
 /**
@@ -295,7 +295,8 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -317,7 +318,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
@@ -414,22 +414,26 @@ SETTINGS
   font-style: normal;
   src: url("../webfonts/2C4409_0_0.eot");
   src: url("../webfonts/2C4409_0_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/2C4409_0_0.woff") format("woff"), url("../webfonts/2C4409_0_0.ttf") format("truetype"); }
+
 @font-face {
   font-family: 'Anivers';
   font-weight: normal;
   font-style: normal;
   src: url("../webfonts/2C4409_1_0.eot");
   src: url("../webfonts/2C4409_1_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/2C4409_1_0.woff") format("woff"), url("../webfonts/2C4409_1_0.ttf") format("truetype"); }
+
 @font-face {
   font-family: 'Anivers-SC';
   src: url("../webfonts/2C4409_2_0.eot");
   src: url("../webfonts/2C4409_2_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/2C4409_2_0.woff") format("woff"), url("../webfonts/2C4409_2_0.ttf") format("truetype"); }
+
 @font-face {
   font-family: 'Anivers';
   font-weight: normal;
   font-style: italic;
   src: url("../webfonts/2C4409_3_0.eot");
   src: url("../webfonts/2C4409_3_0.eot?#iefix") format("embedded-opentype"), url("../webfonts/2C4409_3_0.woff") format("woff"), url("../webfonts/2C4409_3_0.ttf") format("truetype"); }
+
 /*------- VARIABLES -------*/
 /*------- Susy Settings -------*/
 /*------- Font Variables -------*/
@@ -473,7 +477,6 @@ html {
 *:after {
   /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -521,8 +524,6 @@ a:active {
 a img {
   border: 0; }
 
-img {max-width: 100%;}
-
 /*------- Global Type Styles -------*/
 body,
 button,
@@ -544,7 +545,8 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-bottom: .75em; }
 
-b, strong {
+b,
+strong {
   font-weight: bold; }
 
 dfn, cite, em, i {
@@ -690,9 +692,9 @@ big {
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */
-    -webkit-border-radius: 3px;
     border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     display: block;
     font-size: 14px;
@@ -709,24 +711,25 @@ big {
     /* Above WP toolbar */ }
 
 /*------- Global Layout Styles -------*/
-.main-navigation,
-.container {
+
+.container,
+.main-navigation {
   max-width: 60em;
   margin-left: auto;
   margin-right: auto; }
-  .main-navigation:after,
-  .container:after {
+  
+  .container:after,
+  .main-navigation:after {
     content: " ";
     display: block;
     clear: both; }
 
-#page.container {
+#page.container, #page.main-navigation {
   width: 96%;
   position: relative;
   background-color: white;
   padding-top: 10px;
   -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=145, Color='#CCCCCC'); }
 
@@ -768,9 +771,6 @@ a[rel=tag] {
   letter-spacing: 1px;
   background: #b2c92d;
   /* fallback */
-  background: -webkit-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -webkit-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -webkit-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -webkit-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-  background: -moz-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -moz-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -moz-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -moz-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-  background: -o-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -o-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -o-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -o-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
   background: linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(225deg, transparent 7px, #b2c92d 7px), linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
   background-position: bottom left, bottom right, top right, top left;
   background-size: 51% 50%;
@@ -793,9 +793,6 @@ a[rel=tag] {
     top: 0; }
   .button:hover, .button:focus, .button:active {
     background: #91a325;
-    background: -webkit-linear-gradient(45deg, #91a325 7px, #91a325 7px), -webkit-linear-gradient(135deg, #91a325 7px, #91a325 7px), -webkit-linear-gradient(225deg, transparent 7px, #91a325 7px), -webkit-linear-gradient(315deg, #91a325 7px, #91a325 7px);
-    background: -moz-linear-gradient(45deg, #91a325 7px, #91a325 7px), -moz-linear-gradient(135deg, #91a325 7px, #91a325 7px), -moz-linear-gradient(225deg, transparent 7px, #91a325 7px), -moz-linear-gradient(315deg, #91a325 7px, #91a325 7px);
-    background: -o-linear-gradient(45deg, #91a325 7px, #91a325 7px), -o-linear-gradient(135deg, #91a325 7px, #91a325 7px), -o-linear-gradient(225deg, transparent 7px, #91a325 7px), -o-linear-gradient(315deg, #91a325 7px, #91a325 7px);
     background: linear-gradient(45deg, #91a325 7px, #91a325 7px), linear-gradient(135deg, #91a325 7px, #91a325 7px), linear-gradient(225deg, transparent 7px, #91a325 7px), linear-gradient(315deg, #91a325 7px, #91a325 7px);
     background-position: bottom left, bottom right, top right, top left;
     background-size: 51% 50%;
@@ -809,18 +806,12 @@ a[rel=tag] {
     float: left;
     background: #b2c92d;
     /* fallback */
-    background: -webkit-linear-gradient(45deg, #b2c92d 7px, #b2c92d 0), -webkit-linear-gradient(135deg, transparent 7px, #b2c92d 0), -webkit-linear-gradient(225deg, #b2c92d 7px, #b2c92d 0), -webkit-linear-gradient(315deg, #b2c92d 7px, #b2c92d 0);
-    background: -moz-linear-gradient(45deg, #b2c92d 7px, #b2c92d 0), -moz-linear-gradient(135deg, transparent 7px, #b2c92d 0), -moz-linear-gradient(225deg, #b2c92d 7px, #b2c92d 0), -moz-linear-gradient(315deg, #b2c92d 7px, #b2c92d 0);
-    background: -o-linear-gradient(45deg, #b2c92d 7px, #b2c92d 0), -o-linear-gradient(135deg, transparent 7px, #b2c92d 0), -o-linear-gradient(225deg, #b2c92d 7px, #b2c92d 0), -o-linear-gradient(315deg, #b2c92d 7px, #b2c92d 0);
     background: linear-gradient(45deg, #b2c92d 7px, #b2c92d 0), linear-gradient(135deg, transparent 7px, #b2c92d 0), linear-gradient(225deg, #b2c92d 7px, #b2c92d 0), linear-gradient(315deg, #b2c92d 7px, #b2c92d 0);
     background-position: bottom left, top left, top right, bottom right;
     background-size: 51% 50%;
     background-repeat: no-repeat; }
     .nav-links .nav-previous a:hover, .nav-links .nav-previous a:focus, .nav-links .nav-previous a:active {
       background: #91a325;
-      background: -webkit-linear-gradient(45deg, #91a325 7px, #91a325 0), -webkit-linear-gradient(135deg, transparent 7px, #91a325 0), -webkit-linear-gradient(225deg, #91a325 7px, #91a325 0), -webkit-linear-gradient(315deg, #91a325 7px, #91a325 0);
-      background: -moz-linear-gradient(45deg, #91a325 7px, #91a325 0), -moz-linear-gradient(135deg, transparent 7px, #91a325 0), -moz-linear-gradient(225deg, #91a325 7px, #91a325 0), -moz-linear-gradient(315deg, #91a325 7px, #91a325 0);
-      background: -o-linear-gradient(45deg, #91a325 7px, #91a325 0), -o-linear-gradient(135deg, transparent 7px, #91a325 0), -o-linear-gradient(225deg, #91a325 7px, #91a325 0), -o-linear-gradient(315deg, #91a325 7px, #91a325 0);
       background: linear-gradient(45deg, #91a325 7px, #91a325 0), linear-gradient(135deg, transparent 7px, #91a325 0), linear-gradient(225deg, #91a325 7px, #91a325 0), linear-gradient(315deg, #91a325 7px, #91a325 0);
       background-position: bottom left, top left, top right, bottom right;
       background-size: 51% 50%;
@@ -829,18 +820,12 @@ a[rel=tag] {
     float: right;
     background: #b2c92d;
     /* fallback */
-    background: -webkit-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -webkit-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -webkit-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -webkit-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-    background: -moz-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -moz-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -moz-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -moz-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-    background: -o-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -o-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -o-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -o-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
     background: linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(225deg, transparent 7px, #b2c92d 7px), linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
     background-position: bottom left, top left, top right, bottom right;
     background-size: 51% 50%;
     background-repeat: no-repeat; }
     .nav-links .nav-next a:hover, .nav-links .nav-next a:focus, .nav-links .nav-next a:active {
       background: #91a325;
-      background: -webkit-linear-gradient(45deg, #91a325 7px, #91a325 7px), -webkit-linear-gradient(135deg, #91a325 7px, #91a325 7px), -webkit-linear-gradient(225deg, transparent 7px, #91a325 7px), -webkit-linear-gradient(315deg, #91a325 7px, #91a325 7px);
-      background: -moz-linear-gradient(45deg, #91a325 7px, #91a325 7px), -moz-linear-gradient(135deg, #91a325 7px, #91a325 7px), -moz-linear-gradient(225deg, transparent 7px, #91a325 7px), -moz-linear-gradient(315deg, #91a325 7px, #91a325 7px);
-      background: -o-linear-gradient(45deg, #91a325 7px, #91a325 7px), -o-linear-gradient(135deg, #91a325 7px, #91a325 7px), -o-linear-gradient(225deg, transparent 7px, #91a325 7px), -o-linear-gradient(315deg, #91a325 7px, #91a325 7px);
       background: linear-gradient(45deg, #91a325 7px, #91a325 7px), linear-gradient(135deg, #91a325 7px, #91a325 7px), linear-gradient(225deg, transparent 7px, #91a325 7px), linear-gradient(315deg, #91a325 7px, #91a325 7px);
       background-position: bottom left, bottom right, top right, top left;
       background-size: 51% 50%;
@@ -907,9 +892,6 @@ th {
   letter-spacing: 1px;
   background: #b2c92d;
   /* fallback */
-  background: -webkit-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -webkit-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -webkit-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -webkit-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-  background: -moz-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -moz-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -moz-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -moz-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-  background: -o-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -o-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -o-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -o-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
   background: linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(225deg, transparent 7px, #b2c92d 7px), linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
   background-position: bottom left, bottom right, top right, top left;
   background-size: 51% 50%;
@@ -933,9 +915,6 @@ th {
     top: 0; }
   th:hover, th:focus, th:active {
     background: #91a325;
-    background: -webkit-linear-gradient(45deg, #91a325 7px, #91a325 7px), -webkit-linear-gradient(135deg, #91a325 7px, #91a325 7px), -webkit-linear-gradient(225deg, transparent 7px, #91a325 7px), -webkit-linear-gradient(315deg, #91a325 7px, #91a325 7px);
-    background: -moz-linear-gradient(45deg, #91a325 7px, #91a325 7px), -moz-linear-gradient(135deg, #91a325 7px, #91a325 7px), -moz-linear-gradient(225deg, transparent 7px, #91a325 7px), -moz-linear-gradient(315deg, #91a325 7px, #91a325 7px);
-    background: -o-linear-gradient(45deg, #91a325 7px, #91a325 7px), -o-linear-gradient(135deg, #91a325 7px, #91a325 7px), -o-linear-gradient(225deg, transparent 7px, #91a325 7px), -o-linear-gradient(315deg, #91a325 7px, #91a325 7px);
     background: linear-gradient(45deg, #91a325 7px, #91a325 7px), linear-gradient(135deg, #91a325 7px, #91a325 7px), linear-gradient(225deg, transparent 7px, #91a325 7px), linear-gradient(315deg, #91a325 7px, #91a325 7px);
     background-position: bottom left, bottom right, top right, top left;
     background-size: 51% 50%;
@@ -979,6 +958,7 @@ MODULES
 @media (max-width: 599px) {
   .main-navigation {
     position: relative; } }
+
 .main-navigation > div > ul {
   list-style: none;
   margin: 0;
@@ -1026,9 +1006,6 @@ MODULES
       letter-spacing: 1px;
       background: #b2c92d;
       /* fallback */
-      background: -webkit-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -webkit-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -webkit-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -webkit-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-      background: -moz-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -moz-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -moz-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -moz-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-      background: -o-linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), -o-linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), -o-linear-gradient(225deg, transparent 7px, #b2c92d 7px), -o-linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
       background: linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(225deg, transparent 7px, #b2c92d 7px), linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
       background-position: bottom left, bottom right, top right, top left;
       background-size: 51% 50%;
@@ -1052,9 +1029,6 @@ MODULES
         top: 0; }
       .main-navigation > div > ul > li > a:hover, .main-navigation > div > ul > li > a:focus, .main-navigation > div > ul > li > a:active {
         background: #91a325;
-        background: -webkit-linear-gradient(45deg, #91a325 7px, #91a325 7px), -webkit-linear-gradient(135deg, #91a325 7px, #91a325 7px), -webkit-linear-gradient(225deg, transparent 7px, #91a325 7px), -webkit-linear-gradient(315deg, #91a325 7px, #91a325 7px);
-        background: -moz-linear-gradient(45deg, #91a325 7px, #91a325 7px), -moz-linear-gradient(135deg, #91a325 7px, #91a325 7px), -moz-linear-gradient(225deg, transparent 7px, #91a325 7px), -moz-linear-gradient(315deg, #91a325 7px, #91a325 7px);
-        background: -o-linear-gradient(45deg, #91a325 7px, #91a325 7px), -o-linear-gradient(135deg, #91a325 7px, #91a325 7px), -o-linear-gradient(225deg, transparent 7px, #91a325 7px), -o-linear-gradient(315deg, #91a325 7px, #91a325 7px);
         background: linear-gradient(45deg, #91a325 7px, #91a325 7px), linear-gradient(135deg, #91a325 7px, #91a325 7px), linear-gradient(225deg, transparent 7px, #91a325 7px), linear-gradient(315deg, #91a325 7px, #91a325 7px);
         background-position: bottom left, bottom right, top right, top left;
         background-size: 51% 50%;
@@ -1066,11 +1040,11 @@ MODULES
           padding-left: 10px; }
           .main-navigation > div > ul > li > a:after {
             background-image: none; } }
-    .main-navigation > div > ul > li.current-menu-item > a, .main-navigation > div > ul > li.current-menu-parent > a, .main-navigation > div > ul > li.current_page_parent > a, .main-navigation > div > ul > li.current-page-ancestor > a {
+    .main-navigation > div > ul > li.current-menu-item > a,
+    .main-navigation > div > ul > li.current-menu-parent > a,
+    .main-navigation > div > ul > li.current_page_parent > a,
+    .main-navigation > div > ul > li.current-page-ancestor > a {
       background: #bb001b;
-      background: -webkit-linear-gradient(45deg, #bb001b 7px, #bb001b 7px), -webkit-linear-gradient(135deg, #bb001b 7px, #bb001b 7px), -webkit-linear-gradient(225deg, transparent 7px, #bb001b 7px), -webkit-linear-gradient(315deg, #bb001b 7px, #bb001b 7px);
-      background: -moz-linear-gradient(45deg, #bb001b 7px, #bb001b 7px), -moz-linear-gradient(135deg, #bb001b 7px, #bb001b 7px), -moz-linear-gradient(225deg, transparent 7px, #bb001b 7px), -moz-linear-gradient(315deg, #bb001b 7px, #bb001b 7px);
-      background: -o-linear-gradient(45deg, #bb001b 7px, #bb001b 7px), -o-linear-gradient(135deg, #bb001b 7px, #bb001b 7px), -o-linear-gradient(225deg, transparent 7px, #bb001b 7px), -o-linear-gradient(315deg, #bb001b 7px, #bb001b 7px);
       background: linear-gradient(45deg, #bb001b 7px, #bb001b 7px), linear-gradient(135deg, #bb001b 7px, #bb001b 7px), linear-gradient(225deg, transparent 7px, #bb001b 7px), linear-gradient(315deg, #bb001b 7px, #bb001b 7px);
       background-position: bottom left, bottom right, top right, top left;
       background-size: 51% 50%;
@@ -1118,9 +1092,6 @@ ul.sub-menu {
         width: 33.333%;
         margin-right: 0; } }
 
-@media (max-width: 599px) {
-  #menu-main-menu > li:first-child ul.sub-menu li {
-    width: 25%; } }
 .main-navigation > div > ul > li:nth-child(2) > ul.sub-menu {
   left: auto;
   right: -3px; }
@@ -1130,7 +1101,9 @@ ul.sub-menu {
 
 .sub-menu {
   display: none; }
-  .current-menu-parent .sub-menu, .current-menu-item .sub-menu, .current-page-ancestor .sub-menu {
+  .current-menu-parent .sub-menu,
+  .current-menu-item .sub-menu,
+  .current-page-ancestor .sub-menu {
     display: block; }
 
 .site-header {
@@ -1324,6 +1297,7 @@ ul.sub-menu {
     width: 100%;
     opacity: 1;
     bottom: 0;
+    -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
     background-color: #bb001b;
     background-color: rgba(187, 0, 27, 0.75);
@@ -1340,12 +1314,15 @@ ul.sub-menu {
   .grid-single-gift img {
     max-width: 100%;
     display: block;
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease; }
 
 .grid-single-gift:hover img {
   -webkit-transform: scale(1.4);
   transform: scale(1.4);
+  -webkit-transition: all 4.5s ease;
   transition: all 4.5s ease; }
+
 .grid-single-gift:hover .caption {
   opacity: 1; }
 
@@ -1363,6 +1340,7 @@ ul.sub-menu {
     border-bottom: 1px solid #f3f3f3; }
     .widget ul li:last-of-type {
       border-bottom: none; }
+
 .widget .button {
   margin-top: 5px;
   display: inline-block;
@@ -1399,6 +1377,7 @@ ul.sub-menu {
     width: 66.3157894737%;
     float: right;
     margin-right: 0; } }
+
 .financial-tabs-wrapper > h2 {
   text-align: center;
   margin-bottom: 15px;
@@ -1569,15 +1548,12 @@ h2.resp-tab-active span.resp-arrow {
 @media only screen and (max-width: 500px) {
   ul.resp-tabs-list {
     display: none; }
-
   h2.resp-accordion {
     display: block;
     font-size: 16px;
     font-size: 1.6rem; }
-
   .resp-vtabs .resp-tab-content {
     border-left: 5px solid white; }
-
   .resp-vtabs .resp-tab-content-active {
     width: 100%;
     border-left: 5px solid #b2c92d;
@@ -1588,16 +1564,15 @@ h2.resp-tab-active span.resp-arrow {
         content: "";
         display: table;
         clear: both; }
-
   .resp-vtabs .resp-tabs-container {
     border: none;
     float: none;
     width: 100%;
     min-height: initial;
     clear: none; }
-
   .resp-accordion-closed {
     display: none !important; } }
+
 /*------- Footer -------*/
 .site-footer {
   background-color: #b2c92d;
@@ -1683,10 +1658,12 @@ LAYOUTS
     color: white;
     display: inline-block;
     border-bottom: 3px solid white;
+    -webkit-transition: 0.25s all ease;
     transition: 0.25s all ease; }
     .slider-overlay a:hover {
       color: #bb001b;
       border-bottom-color: #bb001b;
+      -webkit-transition: 0.25s all ease;
       transition: 0.25s all ease;
       background-color: rgba(255, 255, 255, 0.85); }
 
@@ -1847,6 +1824,7 @@ LAYOUTS
     font-size: 1.4rem; }
     .post .entry-header .post-categories li a {
       color: gray; }
+
 .post .entry-header .entry-meta {
   color: #b2c92d;
   font-size: 16px;
@@ -1855,16 +1833,20 @@ LAYOUTS
   text-transform: lowercase;
   letter-spacing: 1px;
   line-height: 1.2; }
+
 .post .entry-header .entry-title {
   font-size: 22px;
   font-size: 2.2rem;
   font-weight: bold; }
+
 .post .entry-header .entry-organization {
   text-transform: lowercase;
   font-size: 14px;
   font-size: 1.4rem; }
+
 .post .entry-header .organization-label {
   font-family: "Anivers-SC", sans-serif; }
+
 .post .entry-header .entry-organization a {
   font-family: "Bitter", serif; }
 
@@ -1922,68 +1904,4 @@ LAYOUTS
         font-size: 1.6rem; } }
   .financial-graph img {
     max-width: 100%; }
-
-/*------- Team --------*/
-.team-member__name {
-  font-size: 22px;
-  font-size: 2.2rem; }
-
-.team-member__title {
-  font-family: "Anivers-SC", sans-serif;
-  color: #807e82;
-  text-transform: lowercase;
-  line-height: 1;
-  margin-bottom: 15px; }
-
-.team-member {
-  border-bottom: 1px solid #b2c92d;
-  margin-bottom: 30px;
-  padding-bottom: 15px; }
-
-.team-member--with-photo {
-  margin: 0 auto 30px auto;
-  border-bottom: 1px solid #b2c92d;
-  padding-bottom: 15px; }
-  .team-member--with-photo:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-@media (max-width: 650px) {
-  .show-team-photos .entry-header {
-    text-align: center;
-    margin-bottom: 30px; }
-
-  .hide-team-photos .entry-header {
-    margin-left: 15px; }
-
-  .team-member--with-photo,
-  .team-member {
-    margin-left: 15px;
-    margin-right: 15px; }
-
-  .team-member--with-photo .team-member__name,
-  .team-member--with-photo .team-member__title {
-    text-align: center; }
-
-  .team-member__headshot {
-    margin: 0 auto 15px;
-    display: block; } }
-.team-member__headshot {
-  max-width: 100%; }
-
-@media (min-width: 650px) {
-  .team-member__headshot {
-    width: 30.4347826087%;
-    float: left;
-    margin-top: 9px; }
-
-  .bio-wrap {
-    float: right;
-    width: 65.2173913043%;
-    margin-left: 4.347826087%; } }
-@media (min-width: 850px) {
-  .show-team-photos .entry-header,
-  .show-team-photos .entry-content {
-    max-width: 74.7368421053%;
-    margin: 0 auto; } }
+/*# sourceMappingURL=style.css.map */

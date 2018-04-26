@@ -3,55 +3,55 @@
   font-weight: bold;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
-  
+
   padding-left: gutter(4);
-  
-  @include breakpoint(720px) {
+
+  @media (min-width: 720px) {
     padding-left: gutter(12);
   }
 }
 
 .single-gift .entry-content {
-  
+
   @include font-size(1.4);
   padding: 0 gutter(4);
   margin-bottom: 1.5em;
- 
-  @include breakpoint(720px) {  
+
+  @media (min-width: 720px) {
     @include span(6 of 12 last);
     padding-left: 0;
     padding-right: gutter(12);
     margin-bottom: 0;
   }
-  
-  @include breakpoint(768px) {
+
+  @media (min-width: 768px) {
     @include span(5 of 12 last);
   }
-  
-  @include breakpoint(850px) {
+
+  @media (min-width: 850px) {
     @include span(4 of 12 last);
-    
+
   }
 }
 
 .single-gift .entry-slider,
 .gift-callout {
- 
+
   padding: 0 gutter(4);
- 
-  @include breakpoint(720px) {
+
+  @media (min-width: 720px) {
     @include span(6 of 12);
     margin-right: gutter(12);
     padding-right: gutter(12);
     padding-left: gutter(12);
   }
-  
-  @include breakpoint(768px) {
+
+  @media (min-width: 768px) {
     @include span(7 of 12);
   }
- 
-  @include breakpoint(850px) {
-    @include span(8 of 12); 
+
+  @media (min-width: 850px) {
+    @include span(8 of 12);
   }
   img {
     width: 100%;
@@ -60,7 +60,7 @@
 }
 
 .entry-slider .sy-caption-wrap .sy-caption {
-  @include breakpoint(max-width 600px) {
+  @media (max-width: 600px) {
     @include font-size(1.2);
   }
 }
@@ -89,13 +89,13 @@
   font-style: italic;
   @include font-size(1.8);
   text-align:left;
-  @include breakpoint(600px) {
+  @media (min-width: 600px) {
     @include font-size(2.2);
   }
-  @include breakpoint(720px) {
+  @media (min-width: 720px) {
     text-align: right;
   }
-  @include breakpoint(768px) {
+  @media (min-width: 768px) {
     @include font-size(2.6);
   }
   line-height: 1.6;

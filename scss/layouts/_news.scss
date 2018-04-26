@@ -1,7 +1,7 @@
 .blog .content-area,
 .single .content-area {
   padding: gutter(4) gutter(4) gutter(4) 0;
-  @include breakpoint(720px) {
+  @media (min-width: 720px) {
     @include span(8 of 12);
     padding-right: gutter(6);
   }
@@ -10,7 +10,7 @@
 .blog .widget-area,
 .single .widget-area {
   padding: gutter(4);
-  @include breakpoint(720px) {
+  @media (min-width: 720px) {
     padding-left: 0;
     padding-right: gutter(6);
     @include span(4 of 12 last);
@@ -20,7 +20,7 @@
 .post .entry-header {
   border-left: 5px solid $kinder-red;
   padding-left: gutter(4);
-  @include breakpoint(720px) {
+  @media (min-width: 720px) {
     padding-right: gutter(6);
   }
 }
@@ -51,7 +51,7 @@
     @include font-size(2.2);
     font-weight: bold;
   }
-  
+
   .entry-organization {
     text-transform: lowercase;
     @include font-size(1.4);
@@ -68,7 +68,7 @@
   border-left: 5px solid white;
   padding-left: gutter(4);
   margin-top: 1em;
-  @include breakpoint(720px) {
+  @media (min-width: 720px) {
     padding-right: gutter(6);
     margin-top: 1em;
   }

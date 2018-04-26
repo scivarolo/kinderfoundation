@@ -1,5 +1,5 @@
 .financial-tabs-wrapper {
-  @include breakpoint(768px) {
+  @media (min-width: 768px) {
     @include span(8 of 12 last);
   }
   > h2 {
@@ -11,7 +11,7 @@
 
 .financials-table {
   @include span(12 of 12);
-  @include breakpoint(500px) {
+  @media (min-width: 500px) {
     @include font-size(1.6);
   }
   border-bottom: 1px solid whitesmoke;
@@ -30,7 +30,7 @@
       font-style: italic;
     }
   }
-  
+
 }
 
 .financials-amount {
@@ -43,7 +43,7 @@
   text-align:right;
 }
 
-.financials-note, 
+.financials-note,
 .future-message {
   @include font-size(1.4);
   margin-bottom: 10px;
@@ -236,7 +236,7 @@ h2.resp-accordion:first-child {
     .resp-vtabs .resp-tab-content {
         border-left: 5px solid white;
     }
-    
+
     .resp-vtabs .resp-tab-content-active {
       width: 100%;
       border-left: 5px solid $kinder-green;

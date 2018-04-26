@@ -6,16 +6,16 @@
   background-color: rgba($kinder-red, 0.75);
   color:white;
   font-family: $serif;
-  
+
   @include font-size(1.4);
-  
-  @include breakpoint(500px) {
+
+  @media (min-width: 500px) {
     @include font-size(2);
   }
-  @include breakpoint(680px) {
+  @media (min-width: 680px) {
     @include font-size(2.4);
   }
-  @include breakpoint(800px) {
+  @media (min-width: 800px) {
     @include font-size(3.2);
   }
   bottom: 15%;
