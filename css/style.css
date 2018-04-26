@@ -591,8 +591,17 @@ big {
   font-size: 28px;
   font-size: 1.75rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
-  margin-top: 0.5rem; }
+  margin-bottom: 1.25rem;
+  margin-top: 1rem;
+  line-height: 1.3; }
+  @media (min-width: 600px) {
+    .page .entry-header .entry-title {
+      font-size: 36px;
+      font-size: 2.25rem; } }
+  @media (min-width: 1000px) {
+    .page .entry-header .entry-title {
+      font-size: 42px;
+      font-size: 2.625rem; } }
 
 .archive-title {
   font-size: 24px;
