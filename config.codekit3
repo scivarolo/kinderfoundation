@@ -800,19 +800,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/scss\/_variables.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/css\/_variables.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/scss\/elements\/_elements.scss": {
 		"aP": 1,
 		"bl": 0,

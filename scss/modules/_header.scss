@@ -7,8 +7,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    @include span(12 of 12);
-
+    display: flex;
     @media (max-width: 871px) {
       @include font-size(1.4);
     }
@@ -16,27 +15,26 @@
       @include font-size(1.3);
     }
     @media (min-width: 600px) {
-      @include span(8 of 12 last);
+      width: (8 / 12) * 100% - .75;
+      float: right;
     }
     @media (min-width: 800px) {
-      @include span(6 of 12 last);
+      width: (1 / 2) * 100% - .75;
     }
     > li {
       margin: 0;
       padding: 0;
-      @include span(4 of 12);
+      flex: 1 1;
+      border-left: 5px solid white;
       overflow:visible;
       @media (min-width: 600px) {
         position:relative;
       }
 
       &:last-of-type {
-        @include last;
         border-right: 5px solid white;
       }
-      &:first-of-type {
-        border-left: 5px solid white;
-      }
+
       > a {
         @include button;
         display:block;
@@ -76,16 +74,23 @@
   }
 }
 
+.sub-menu {
+  display: none;
+  .current-menu-parent &,
+  .current-menu-item &,
+  .current-page-ancestor & {
+    display: block;
+  }
+}
+
 ul.sub-menu {
   list-style: none;
-  margin: 0;
+  margin: 2px 0 0 -3px;
   padding: 0;
   position: absolute;
-  margin-top: 2px;
-  margin-left: -3px;
-  border: 3px solid white;
   left: 0;
-  white-space:nowrap;
+  border: 3px solid white;
+  white-space: nowrap;
   background-color: $kinder-gray;
   font-size: 0;
   li {
@@ -94,7 +99,6 @@ ul.sub-menu {
     &.current-page-ancestor {
       background: $kinder-red;
     }
-    //margin-right: -3px;
     display:inline-block;
     border-right: 3px solid white;
     padding: 6px 14px;
@@ -115,11 +119,17 @@ ul.sub-menu {
   @media (max-width: 599px) {
     width: 100%;
     margin-left: 0;
-    li {
+    li:first-child:nth-last-child(3),
+    li:first-child:nth-last-child(3) ~ li {
       width: 33.333%;
-      margin-right: 0; }
+      margin-right: 0;
+    }
+    li:first-child:nth-last-child(4),
+    li:first-child:nth-last-child(4) ~ li {
+      width: 25%;
+      margin-right: 0;
+    }
   }
-
 }
 
 .main-navigation > div > ul > li:nth-child(2) > ul.sub-menu {
@@ -130,26 +140,12 @@ ul.sub-menu {
   }
 }
 
-
-
-.sub-menu {
-  display: none;
-  .current-menu-parent &,
-  .current-menu-item &,
-  .current-page-ancestor & {
-    display: block;
-  }
-}
-
-
-
 .site-header {
-  //background: $kinder-green;
   border-top: 5px solid white;
   padding: 60px 0 20px;
   border-bottom: 10px solid white;
-  z-index:101;
-  width:100%;
+  z-index: 101;
+  width: 100%;
   @include clearfix;
   .home & {
     @media (min-width: 600px) {
@@ -158,7 +154,6 @@ ul.sub-menu {
     }
   }
 }
-
 
 .kinder-logo {
   @media (max-width: 600px) {
@@ -181,8 +176,8 @@ ul.sub-menu {
 }
 
 .page-title {
-  float:right;
-  text-align:right;
+  float: right;
+  text-align: right;
   text-transform: lowercase;
   h1, h2 { color: white; }
   margin-right: span(1 of 12);

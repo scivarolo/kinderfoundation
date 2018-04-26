@@ -945,10 +945,9 @@ MODULES
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   @media (max-width: 871px) {
     .main-navigation > div > ul {
       font-size: 14px;
@@ -959,30 +958,24 @@ MODULES
       font-size: 0.8125rem; } }
   @media (min-width: 600px) {
     .main-navigation > div > ul {
-      width: 66.3157894737%;
-      float: right;
-      margin-right: 0; } }
+      width: 65.9166666667%;
+      float: right; } }
   @media (min-width: 800px) {
     .main-navigation > div > ul {
-      width: 49.4736842105%;
-      float: right;
-      margin-right: 0; } }
+      width: 49.25%; } }
   .main-navigation > div > ul > li {
     margin: 0;
     padding: 0;
-    width: 32.6315789474%;
-    float: left;
-    margin-right: 1.0526315789%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1;
+    border-left: 5px solid white;
     overflow: visible; }
     @media (min-width: 600px) {
       .main-navigation > div > ul > li {
         position: relative; } }
     .main-navigation > div > ul > li:last-of-type {
-      float: right;
-      margin-right: 0;
       border-right: 5px solid white; }
-    .main-navigation > div > ul > li:first-of-type {
-      border-left: 5px solid white; }
     .main-navigation > div > ul > li > a {
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -1032,15 +1025,20 @@ MODULES
       background-size: 51% 50%;
       background-repeat: no-repeat; }
 
+.sub-menu {
+  display: none; }
+  .current-menu-parent .sub-menu,
+  .current-menu-item .sub-menu,
+  .current-page-ancestor .sub-menu {
+    display: block; }
+
 ul.sub-menu {
   list-style: none;
-  margin: 0;
+  margin: 2px 0 0 -3px;
   padding: 0;
   position: absolute;
-  margin-top: 2px;
-  margin-left: -3px;
-  border: 3px solid white;
   left: 0;
+  border: 3px solid white;
   white-space: nowrap;
   background-color: #807e82;
   font-size: 0;
@@ -1070,8 +1068,13 @@ ul.sub-menu {
     ul.sub-menu {
       width: 100%;
       margin-left: 0; }
-      ul.sub-menu li {
+      ul.sub-menu li:first-child:nth-last-child(3),
+      ul.sub-menu li:first-child:nth-last-child(3) ~ li {
         width: 33.333%;
+        margin-right: 0; }
+      ul.sub-menu li:first-child:nth-last-child(4),
+      ul.sub-menu li:first-child:nth-last-child(4) ~ li {
+        width: 25%;
         margin-right: 0; } }
 
 .main-navigation > div > ul > li:nth-child(2) > ul.sub-menu {
@@ -1080,13 +1083,6 @@ ul.sub-menu {
   @media (max-width: 599px) {
     .main-navigation > div > ul > li:nth-child(2) > ul.sub-menu {
       right: 0; } }
-
-.sub-menu {
-  display: none; }
-  .current-menu-parent .sub-menu,
-  .current-menu-item .sub-menu,
-  .current-page-ancestor .sub-menu {
-    display: block; }
 
 .site-header {
   border-top: 5px solid white;
