@@ -14,13 +14,13 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-    
+
     <div id="home-slider">
       <div class="slider-overlay">
         <?php the_field('slider_overlay'); ?>
       </div>
       <ul class="home-slippry">
-        
+
         <?php $images = get_field('slider_images'); ?>
         <?php if( $images ) : ?>
           <?php foreach($images as $image) : ?>
@@ -31,7 +31,7 @@ get_header(); ?>
             <?php endif; ?>
         </ul>
     </div>
-	
+
 	</div><!-- #primary -->
 
 <?php /* get_sidebar(); */ ?>

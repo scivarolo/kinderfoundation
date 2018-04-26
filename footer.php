@@ -9,6 +9,7 @@
 ?>
 
 	</div><!-- #content -->
+</div><!-- #page -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
@@ -20,7 +21,7 @@
 			<p>&copy; <?php echo date('Y'); ?> Kinder Foundation. Site by <a href="http://www.coredesignstudio.com/" target="_blank" rel="designer">CORE Design Studio</a></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 
