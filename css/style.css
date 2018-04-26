@@ -701,7 +701,7 @@ big {
 
 /*------- Global Layout Styles -------*/
 .container, .main-navigation {
-  max-width: 60em;
+  max-width: 75em;
   margin-left: auto;
   margin-right: auto; }
   .container:after, .main-navigation:after {
@@ -1651,7 +1651,8 @@ LAYOUTS
 
 #home-slider img {
   display: block;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
 
 /*------- Single Gift Page -------*/
 .single-gift .entry-title {
