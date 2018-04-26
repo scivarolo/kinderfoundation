@@ -700,15 +700,11 @@ big {
     /* Above WP toolbar */ }
 
 /*------- Global Layout Styles -------*/
-
-.container,
-.main-navigation {
+.container, .main-navigation {
   max-width: 60em;
   margin-left: auto;
   margin-right: auto; }
-  
-  .container:after,
-  .main-navigation:after {
+  .container:after, .main-navigation:after {
     content: " ";
     display: block;
     clear: both; }
@@ -717,10 +713,7 @@ big {
   width: 96%;
   position: relative;
   background-color: white;
-  padding-top: 10px;
-  -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
-  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=145, Color='#CCCCCC'); }
+  padding-top: 10px; }
 
 body {
   background-color: whitesmoke; }
