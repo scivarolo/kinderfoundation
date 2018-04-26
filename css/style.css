@@ -461,16 +461,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   padding: 0;
   vertical-align: baseline; }
 
-html {
-  font-size: 62.5%;
-  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-  overflow-y: scroll;
-  /* Keeps page centered in all browsers regardless of content height */
-  -webkit-text-size-adjust: 100%;
-  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-  -ms-text-size-adjust: 100%;
-  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */ }
-
 *,
 *:before,
 *:after {
@@ -532,7 +522,7 @@ textarea {
   color: #807e82;
   font-family: "Anivers", sans-serif;
   font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased; }
 
@@ -560,7 +550,7 @@ address {
 pre {
   background: white;
   font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
@@ -568,7 +558,7 @@ pre {
 
 code, kbd, tt, var {
   font-size: 15px;
-  font-size: 1.5rem; }
+  font-size: 0.9375rem; }
 
 abbr, acronym {
   border-bottom: 1px dotted red;
@@ -599,14 +589,14 @@ big {
 
 .page .entry-header .entry-title {
   font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem; }
 
 .archive-title {
   font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   float: left;
   margin-top: 15px;
   margin-bottom: 10px; }
@@ -697,7 +687,7 @@ big {
     clip: auto !important;
     display: block;
     font-size: 14px;
-    font-size: 1.4rem;
+    font-size: 0.875rem;
     font-weight: bold;
     height: auto;
     left: 5px;
@@ -831,7 +821,7 @@ a[rel=tag] {
       background-repeat: no-repeat; }
   .nav-links a {
     font-size: 13px;
-    font-size: 1.3rem;
+    font-size: 0.8125rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 11px 15px 7px 15px;
@@ -883,7 +873,7 @@ table {
   margin: 0 0 1.5em;
   width: 100%;
   font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 0.875rem; }
 
 th {
   font-weight: bold;
@@ -969,11 +959,11 @@ MODULES
   @media (max-width: 871px) {
     .main-navigation > div > ul {
       font-size: 14px;
-      font-size: 1.4rem; } }
+      font-size: 0.875rem; } }
   @media (max-width: 415px) {
     .main-navigation > div > ul {
       font-size: 13px;
-      font-size: 1.3rem; } }
+      font-size: 0.8125rem; } }
   @media (min-width: 600px) {
     .main-navigation > div > ul {
       width: 66.3157894737%;
@@ -1069,13 +1059,13 @@ ul.sub-menu {
     border-right: 3px solid white;
     padding: 6px 14px;
     font-size: 12px;
-    font-size: 1.2rem; }
+    font-size: 0.75rem; }
     ul.sub-menu li.current-menu-item, ul.sub-menu li.current-page-ancestor {
       background: #bb001b; }
     @media (max-width: 420px) {
       ul.sub-menu li {
         font-size: 10px;
-        font-size: 1rem;
+        font-size: 0.625rem;
         padding: 6px; } }
     ul.sub-menu li:last-of-type {
       border-right: none; }
@@ -1157,22 +1147,22 @@ ul.sub-menu {
       max-width: 49.4736842105%; } }
   .page-title h1 {
     font-size: 30px;
-    font-size: 3rem;
+    font-size: 1.875rem;
     font-weight: bold;
     letter-spacing: 1px; }
     @media (min-width: 960px) {
       .page-title h1 {
         font-size: 34px;
-        font-size: 3.4rem; } }
+        font-size: 2.125rem; } }
   .page-title h2 {
     font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-style: italic;
     padding-left: 15px; }
     @media (min-width: 960px) {
       .page-title h2 {
         font-size: 19px;
-        font-size: 1.9rem; } }
+        font-size: 1.1875rem; } }
 
 /*------- Sub Nav -------*/
 .sub-nav {
@@ -1191,7 +1181,7 @@ ul.sub-menu {
     margin-right: 10px;
     font-family: "Bitter", serif;
     font-size: 13px;
-    font-size: 1.3rem; }
+    font-size: 0.8125rem; }
   .sub-nav a {
     color: #807e82; }
     .sub-nav a:hover, .sub-nav a:focus, .sub-nav a:active {
@@ -1264,17 +1254,17 @@ ul.sub-menu {
         height: 150px; } }
   .category-header h2 {
     font-size: 36px;
-    font-size: 3.6rem;
+    font-size: 2.25rem;
     font-weight: bold;
     line-height: 1.1; }
     @media (min-width: 436px) and (max-width: 585px) {
       .category-header h2 {
         font-size: 28px;
-        font-size: 2.8rem; } }
+        font-size: 1.75rem; } }
     @media (min-width: 768px) and (max-width: 850px) {
       .category-header h2 {
         font-size: 32px;
-        font-size: 3.2rem; } }
+        font-size: 2rem; } }
   .category-header h3 {
     color: #b2c92d;
     font-style: italic;
@@ -1305,11 +1295,11 @@ ul.sub-menu {
     .grid-single-gift .caption h3 {
       color: white;
       font-size: 14px;
-      font-size: 1.4rem; }
+      font-size: 0.875rem; }
       @media (min-width: 600px) {
         .grid-single-gift .caption h3 {
           font-size: 16px;
-          font-size: 1.6rem; } }
+          font-size: 1rem; } }
   .grid-single-gift img {
     max-width: 100%;
     display: block;
@@ -1331,7 +1321,7 @@ ul.sub-menu {
   padding: 0;
   margin: 10px 0;
   font-size: 13px;
-  font-size: 1.3rem; }
+  font-size: 0.8125rem; }
   .widget ul li {
     padding-bottom: 7px;
     margin-bottom: 12px;
@@ -1344,7 +1334,7 @@ ul.sub-menu {
   margin-top: 5px;
   display: inline-block;
   font-size: 12px;
-  font-size: 1.2rem; }
+  font-size: 0.75rem; }
 
 .widget-title {
   font-weight: bold;
@@ -1381,7 +1371,7 @@ ul.sub-menu {
   text-align: center;
   margin-bottom: 15px;
   font-size: 20px;
-  font-size: 2rem; }
+  font-size: 1.25rem; }
 
 .financials-table {
   width: 100%;
@@ -1393,7 +1383,7 @@ ul.sub-menu {
   @media (min-width: 500px) {
     .financials-table {
       font-size: 16px;
-      font-size: 1.6rem; } }
+      font-size: 1rem; } }
   .financials-table td {
     padding: 10px; }
   .financials-table tr:nth-of-type(3) td.financials-amount {
@@ -1414,7 +1404,7 @@ ul.sub-menu {
 .financials-note,
 .future-message {
   font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   margin-bottom: 10px; }
 
 h2.resp-accordion {
@@ -1550,7 +1540,7 @@ h2.resp-tab-active span.resp-arrow {
   h2.resp-accordion {
     display: block;
     font-size: 16px;
-    font-size: 1.6rem; }
+    font-size: 1rem; }
   .resp-vtabs .resp-tab-content {
     border-left: 5px solid white; }
   .resp-vtabs .resp-tab-content-active {
@@ -1577,7 +1567,7 @@ h2.resp-tab-active span.resp-arrow {
   background-color: #b2c92d;
   margin-top: 10px;
   font-size: 13px;
-  font-size: 1.3rem; }
+  font-size: 0.8125rem; }
   .site-footer:after {
     content: "";
     display: table;
@@ -1587,7 +1577,7 @@ h2.resp-tab-active span.resp-arrow {
   float: left;
   padding: 7px 15px;
   font-size: 12px;
-  font-size: 1.2rem; }
+  font-size: 0.75rem; }
   .footer-address p {
     margin: 0;
     color: white; }
@@ -1596,7 +1586,7 @@ h2.resp-tab-active span.resp-arrow {
   text-align: right;
   float: right;
   font-size: 12px;
-  font-size: 1.2rem; }
+  font-size: 0.75rem; }
   @media (max-width: 600px) {
     .site-info {
       width: 75%;
@@ -1637,20 +1627,20 @@ LAYOUTS
   color: white;
   font-family: "Bitter", serif;
   font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   bottom: 15%; }
   @media (min-width: 500px) {
     .slider-overlay {
       font-size: 20px;
-      font-size: 2rem; } }
+      font-size: 1.25rem; } }
   @media (min-width: 680px) {
     .slider-overlay {
       font-size: 24px;
-      font-size: 2.4rem; } }
+      font-size: 1.5rem; } }
   @media (min-width: 800px) {
     .slider-overlay {
       font-size: 32px;
-      font-size: 3.2rem; } }
+      font-size: 2rem; } }
   .slider-overlay p {
     margin-bottom: 0; }
   .slider-overlay a {
@@ -1673,7 +1663,7 @@ LAYOUTS
 /*------- Single Gift Page -------*/
 .single-gift .entry-title {
   font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
@@ -1684,7 +1674,7 @@ LAYOUTS
 
 .single-gift .entry-content {
   font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   padding: 0 3.2258064516%;
   margin-bottom: 1.5em; }
   @media (min-width: 720px) {
@@ -1738,7 +1728,7 @@ LAYOUTS
 @media (max-width: 600px) {
   .entry-slider .sy-caption-wrap .sy-caption {
     font-size: 12px;
-    font-size: 1.2rem; } }
+    font-size: 0.75rem; } }
 
 .sy-caption-wrap {
   right: 0;
@@ -1751,7 +1741,7 @@ LAYOUTS
   display: block;
   text-align: right;
   font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 1.125rem;
   font-family: "Bitter", serif;
   font-weight: bold; }
 
@@ -1761,7 +1751,7 @@ LAYOUTS
   font-family: "Bitter", serif;
   font-style: italic;
   font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 1.125rem;
   text-align: left;
   line-height: 1.6;
   color: #abc12b;
@@ -1770,14 +1760,14 @@ LAYOUTS
   @media (min-width: 600px) {
     .gift-callout {
       font-size: 22px;
-      font-size: 2.2rem; } }
+      font-size: 1.375rem; } }
   @media (min-width: 720px) {
     .gift-callout {
       text-align: right; } }
   @media (min-width: 768px) {
     .gift-callout {
       font-size: 26px;
-      font-size: 2.6rem; } }
+      font-size: 1.625rem; } }
 
 /*------- News -------*/
 .blog .content-area,
@@ -1820,14 +1810,14 @@ LAYOUTS
     text-transform: lowercase;
     letter-spacing: 1px;
     font-size: 14px;
-    font-size: 1.4rem; }
+    font-size: 0.875rem; }
     .post .entry-header .post-categories li a {
       color: gray; }
 
 .post .entry-header .entry-meta {
   color: #b2c92d;
   font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-family: "Anivers-SC", sans-serif;
   text-transform: lowercase;
   letter-spacing: 1px;
@@ -1835,13 +1825,13 @@ LAYOUTS
 
 .post .entry-header .entry-title {
   font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 1.375rem;
   font-weight: bold; }
 
 .post .entry-header .entry-organization {
   text-transform: lowercase;
   font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 0.875rem; }
 
 .post .entry-header .organization-label {
   font-family: "Anivers-SC", sans-serif; }
@@ -1896,11 +1886,11 @@ LAYOUTS
     margin-right: 0;
     text-align: center;
     font-size: 20px;
-    font-size: 2rem; }
+    font-size: 1.25rem; }
     @media (max-width: 600px) {
       .financial-graph h2 {
         font-size: 16px;
-        font-size: 1.6rem; } }
+        font-size: 1rem; } }
   .financial-graph img {
     max-width: 100%; }
 /*# sourceMappingURL=style.css.map */

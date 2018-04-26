@@ -1,7 +1,7 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1.6) {
 	font-size: ($sizeValue * 10) + px;
-	font-size: $sizeValue + rem;
+	font-size: ($sizeValue * 0.625) + rem;
 }
 
 // Box model
@@ -53,7 +53,7 @@
 	            linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
 	            linear-gradient(225deg, transparent 7px, $kinder-green 7px),
 	            linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
-  
+
   background-position: bottom left, bottom right, top right, top left;
 	background-size: 51% 50%;
 	background-repeat: no-repeat;
