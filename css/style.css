@@ -1903,4 +1903,61 @@ LAYOUTS
         font-size: 1rem; } }
   .financial-graph img {
     max-width: 100%; }
+
+/*------- Our Team Page -------*/
+.team-member__name {
+  font-size: 24px;
+  font-size: 1.5rem; }
+
+.team-member__title {
+  font-family: "Anivers-SC", sans-serif;
+  color: #807e82;
+  text-transform: lowercase;
+  line-height: 1;
+  margin-bottom: .5em; }
+
+.team-member {
+  border-bottom: 1px solid rgba(128, 126, 130, 0.25);
+  margin-bottom: 1em;
+  padding-bottom: .75em; }
+
+.team-member--with-photo {
+  margin: 0 auto 1em auto;
+  border-bottom: 1px solid rgba(128, 126, 130, 0.25);
+  padding-bottom: .75em; }
+
+.team-member--with-photo:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media (max-width: 650px) {
+  .show-team-photos .entry-header {
+    text-align: center;
+    margin-bottom: 30px; }
+  .team-member--with-photo .team-member__name,
+  .team-member--with-photo .team-member__title {
+    text-align: center; }
+  .team-member__headshot {
+    margin: 0 auto 15px;
+    display: block; } }
+
+.team-member__headshot {
+  max-width: 100%; }
+
+@media (min-width: 650px) {
+  .team-member__headshot {
+    width: 30.4347826087%;
+    float: left;
+    margin-top: 9px; }
+  .bio-wrap {
+    float: right;
+    width: 65.2173913043%;
+    margin-left: 4.347826087%; } }
+
+@media (min-width: 850px) {
+  .show-team-photos .entry-header,
+  .show-team-photos .entry-content {
+    max-width: 74.7368421053%;
+    margin: 0 auto; } }
 /*# sourceMappingURL=style.css.map */
