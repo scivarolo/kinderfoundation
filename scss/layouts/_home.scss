@@ -6,27 +6,31 @@
   background-color: rgba($kinder-red, 0.75);
   color:white;
   font-family: $serif;
-
-  @include font-size(1.4);
-
-  @media (min-width: 500px) {
-    @include font-size(2);
-  }
-  @media (min-width: 680px) {
-    @include font-size(2.4);
-  }
-  @media (min-width: 800px) {
-    @include font-size(3.2);
-  }
+  left: 0;
+  right: 0;
   bottom: 15%;
   p {
     margin-bottom: 0;
+    line-height: 1.8;
+    @include font-size(1.4);
+
+    @media (min-width: 500px) {
+      @include font-size(2);
+    }
+    @media (min-width: 680px) {
+      @include font-size(2.4);
+    }
+    @media (min-width: 800px) {
+      @include font-size(3.2);
+    }
   }
   a {
     color: white;
     display: inline-block;
     border-bottom: 3px solid white;
-    transition: 0.25s all ease;
+    transition: color 0.25s ease, background-color 0.25s ease,
+      border 0.25s ease;
+    z-index:100;
     &:hover {
       color: $kinder-red;
       border-bottom-color: $kinder-red;
@@ -36,8 +40,13 @@
   }
 }
 
-#home-slider img {
-  display: block;
-  max-width: 100%;
-  width: 100%;
+.home-carousel {
+  height: 100vh; // TODO: Heigh of home carousel different on mobile?
+  width: 100vw;
+  position:fixed !important; //overriding owlcarousel css
+  z-index: -1 !important; //overriding owlcarousel css
+  .owl-slide {
+    height: 100vh;
+    width: 100vw;
+  }
 }

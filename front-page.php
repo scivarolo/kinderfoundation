@@ -15,23 +15,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-    <div id="home-slider">
-      <div class="slider-overlay">
-        <?php the_field('slider_overlay'); ?>
-      </div>
-      <ul class="home-slippry">
-
-        <?php $images = get_field('slider_images'); ?>
-        <?php if( $images ) : ?>
-          <?php foreach($images as $image) : ?>
-            <li>
-              <img src="<?php echo $image['sizes']['homepage']; ?>">
-            </li>
-            <?php endforeach; ?>
-            <?php endif; ?>
-        </ul>
-    </div>
-
+    <!-- slider is loading in footer.php if is_front_page -->
+    
 	</div><!-- #primary -->
 
 <?php /* get_sidebar(); */ ?>

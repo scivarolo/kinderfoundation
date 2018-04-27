@@ -11,6 +11,12 @@
 	</div><!-- #content -->
 </div><!-- #page -->
 
+
+  <?php if(is_front_page()) { 
+    echo get_template_part('layouts/home', 'slider');
+  } ?>
+
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<a class="contact-button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact Us' ) ) ); ?>">CONTACT</a>

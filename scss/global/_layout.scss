@@ -13,8 +13,11 @@ body {
   width: 96%;
   position:relative;
   background-color: white;
-  padding-top: 10px;
+  //padding-top: 10px;
   flex: 1;
+  .home & {
+    background: none;
+  }
 }
 
 

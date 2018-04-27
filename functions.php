@@ -65,7 +65,7 @@ add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link',
 	) );
 */
-	
+
 	add_theme_support( 'post-formats', array('link') );
 
 	// Setup the WordPress core custom background feature.
@@ -99,24 +99,27 @@ add_action( 'widgets_init', 'kinderfoundation_widgets_init' );
  * Enqueue scripts and styles.
  */
 function kinderfoundation_scripts() {
-	wp_enqueue_style( 'kinderfoundation-style', get_stylesheet_uri(), array(), '17.12.20' );
+  wp_enqueue_style( 'kinder-owl-css', get_stylesheet_directory_uri() . '/css/owl.carousel.min.css');
+  wp_enqueue_style( 'kinder-owl-theme-css', get_stylesheet_directory_uri() . '/css/owl.theme.default.min.css');
+  wp_enqueue_style( 'kinderfoundation-style', get_stylesheet_uri(), array(), '17.12.20' );
 
 	/* wp_enqueue_script( 'kinderfoundation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true ); */
   wp_enqueue_script('jquery');
 	wp_enqueue_script( 'kinderfoundation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script( 'kinder-slippry', get_template_directory_uri() . '/js/slippry.min.js', array(), null, true );
+  wp_enqueue_script( 'kinder-owl', get_template_directory_uri() . '/js/owl.carousel.min.js');
 	wp_enqueue_script( 'kinder-main', get_template_directory_uri() . '/js/main.js', array(), null, true );
 	wp_enqueue_script( 'respond-js', get_template_directory_uri() . '/js/respond.js', array(), null, false);
-	
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+
 	if ( ! is_admin() && is_page('financials') ) {
   	wp_enqueue_script( 'responsive-tabs', get_template_directory_uri() . '/js/easyResponsiveTabs.js', array(), null, true );
 /*     wp_enqueue_style('responsive-tabs-css', get_template_directory_uri() . '/css/easy-responsive-tabs.css'); */
 	}
-	
+
 }
 add_action( 'wp_enqueue_scripts', 'kinderfoundation_scripts' );
 
@@ -263,7 +266,7 @@ if( function_exists('acf_add_options_page') ) {
    'page_title'   => 'Page Headings',
    'menu_title'   => 'Page Headings',
    'menu_slug'    => 'page-headings',
-   'position'     => 21 
+   'position'     => 21
   ));
 }
 
@@ -317,7 +320,3 @@ function blog_custom_post_type() {
 
 // Hook into the 'init' action
 add_action( 'init', 'blog_custom_post_type', 0 );
-
-
-
-

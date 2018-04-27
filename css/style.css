@@ -733,10 +733,11 @@ body {
   width: 96%;
   position: relative;
   background-color: white;
-  padding-top: 10px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
+  .home #page.container, .home #page.main-navigation {
+    background: none; }
 
 article.page {
   margin: 2.1276595745%; }
@@ -962,93 +963,95 @@ td {
 MODULES
 --------------------------------------------*/
 /*------- Header -------*/
-@media (max-width: 599px) {
-  .main-navigation {
-    position: relative; } }
-
-.main-navigation > div > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  @media (max-width: 871px) {
-    .main-navigation > div > ul {
-      font-size: 14px;
-      font-size: 0.875rem; } }
-  @media (max-width: 415px) {
-    .main-navigation > div > ul {
-      font-size: 13px;
-      font-size: 0.8125rem; } }
-  @media (min-width: 600px) {
-    .main-navigation > div > ul {
-      width: 65.9166666667%;
-      float: right; } }
-  @media (min-width: 800px) {
-    .main-navigation > div > ul {
-      width: 49.25%; } }
-  .main-navigation > div > ul > li {
+.main-navigation {
+  background-color: white;
+  padding-top: 10px; }
+  @media (max-width: 599px) {
+    .main-navigation {
+      position: relative; } }
+  .main-navigation > div > ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1;
-            flex: 1 1;
-    border-left: 5px solid white;
-    overflow: visible; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (max-width: 871px) {
+      .main-navigation > div > ul {
+        font-size: 14px;
+        font-size: 0.875rem; } }
+    @media (max-width: 415px) {
+      .main-navigation > div > ul {
+        font-size: 13px;
+        font-size: 0.8125rem; } }
     @media (min-width: 600px) {
-      .main-navigation > div > ul > li {
-        position: relative; } }
-    .main-navigation > div > ul > li:last-of-type {
-      border-right: 5px solid white; }
-    .main-navigation > div > ul > li > a {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      background: #b2c92d;
-      /* fallback */
-      background: linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(225deg, transparent 7px, #b2c92d 7px), linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-      background-position: bottom left, bottom right, top right, top left;
-      background-size: 51% 50%;
-      background-repeat: no-repeat;
-      padding: 11px 15px 7px 25px;
-      white-space: nowrap;
-      line-height: 1;
-      color: white;
-      position: relative;
-      display: block; }
-      .main-navigation > div > ul > li > a:after {
-        content: '';
-        background-image: url("../img/button-bullet.png");
+      .main-navigation > div > ul {
+        width: 65.9166666667%;
+        float: right; } }
+    @media (min-width: 800px) {
+      .main-navigation > div > ul {
+        width: 49.25%; } }
+    .main-navigation > div > ul > li {
+      margin: 0;
+      padding: 0;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1;
+              flex: 1 1;
+      border-left: 5px solid white;
+      overflow: visible; }
+      @media (min-width: 600px) {
+        .main-navigation > div > ul > li {
+          position: relative; } }
+      .main-navigation > div > ul > li:last-of-type {
+        border-right: 5px solid white; }
+      .main-navigation > div > ul > li > a {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: #b2c92d;
+        /* fallback */
+        background: linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(225deg, transparent 7px, #b2c92d 7px), linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
+        background-position: bottom left, bottom right, top right, top left;
+        background-size: 51% 50%;
         background-repeat: no-repeat;
-        background-position: 0% 50%;
-        background-size: 50%;
-        height: 100%;
-        width: 15px;
-        position: absolute;
-        left: 10px;
-        top: 0; }
-      .main-navigation > div > ul > li > a:hover, .main-navigation > div > ul > li > a:focus, .main-navigation > div > ul > li > a:active {
-        background: #91a325;
-        background: linear-gradient(45deg, #91a325 7px, #91a325 7px), linear-gradient(135deg, #91a325 7px, #91a325 7px), linear-gradient(225deg, transparent 7px, #91a325 7px), linear-gradient(315deg, #91a325 7px, #91a325 7px);
+        padding: 11px 15px 7px 25px;
+        white-space: nowrap;
+        line-height: 1;
+        color: white;
+        position: relative;
+        display: block; }
+        .main-navigation > div > ul > li > a:after {
+          content: '';
+          background-image: url("../img/button-bullet.png");
+          background-repeat: no-repeat;
+          background-position: 0% 50%;
+          background-size: 50%;
+          height: 100%;
+          width: 15px;
+          position: absolute;
+          left: 10px;
+          top: 0; }
+        .main-navigation > div > ul > li > a:hover, .main-navigation > div > ul > li > a:focus, .main-navigation > div > ul > li > a:active {
+          background: #91a325;
+          background: linear-gradient(45deg, #91a325 7px, #91a325 7px), linear-gradient(135deg, #91a325 7px, #91a325 7px), linear-gradient(225deg, transparent 7px, #91a325 7px), linear-gradient(315deg, #91a325 7px, #91a325 7px);
+          background-position: bottom left, bottom right, top right, top left;
+          background-size: 51% 50%;
+          background-repeat: no-repeat; }
+        .main-navigation > div > ul > li > a:visited {
+          color: white; }
+        @media (max-width: 410px) {
+          .main-navigation > div > ul > li > a {
+            padding-left: 10px; }
+            .main-navigation > div > ul > li > a:after {
+              background-image: none; } }
+      .main-navigation > div > ul > li.current-menu-item > a,
+      .main-navigation > div > ul > li.current-menu-parent > a,
+      .main-navigation > div > ul > li.current_page_parent > a,
+      .main-navigation > div > ul > li.current-page-ancestor > a {
+        background: #bb001b;
+        background: linear-gradient(45deg, #bb001b 7px, #bb001b 7px), linear-gradient(135deg, #bb001b 7px, #bb001b 7px), linear-gradient(225deg, transparent 7px, #bb001b 7px), linear-gradient(315deg, #bb001b 7px, #bb001b 7px);
         background-position: bottom left, bottom right, top right, top left;
         background-size: 51% 50%;
         background-repeat: no-repeat; }
-      .main-navigation > div > ul > li > a:visited {
-        color: white; }
-      @media (max-width: 410px) {
-        .main-navigation > div > ul > li > a {
-          padding-left: 10px; }
-          .main-navigation > div > ul > li > a:after {
-            background-image: none; } }
-    .main-navigation > div > ul > li.current-menu-item > a,
-    .main-navigation > div > ul > li.current-menu-parent > a,
-    .main-navigation > div > ul > li.current_page_parent > a,
-    .main-navigation > div > ul > li.current-page-ancestor > a {
-      background: #bb001b;
-      background: linear-gradient(45deg, #bb001b 7px, #bb001b 7px), linear-gradient(135deg, #bb001b 7px, #bb001b 7px), linear-gradient(225deg, transparent 7px, #bb001b 7px), linear-gradient(315deg, #bb001b 7px, #bb001b 7px);
-      background-position: bottom left, bottom right, top right, top left;
-      background-size: 51% 50%;
-      background-repeat: no-repeat; }
 
 .sub-menu {
   display: none; }
@@ -1640,29 +1643,33 @@ LAYOUTS
   background-color: rgba(187, 0, 27, 0.75);
   color: white;
   font-family: "Bitter", serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  left: 0;
+  right: 0;
   bottom: 15%; }
-  @media (min-width: 500px) {
-    .slider-overlay {
-      font-size: 20px;
-      font-size: 1.25rem; } }
-  @media (min-width: 680px) {
-    .slider-overlay {
-      font-size: 24px;
-      font-size: 1.5rem; } }
-  @media (min-width: 800px) {
-    .slider-overlay {
-      font-size: 32px;
-      font-size: 2rem; } }
   .slider-overlay p {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    line-height: 1.8;
+    font-size: 14px;
+    font-size: 0.875rem; }
+    @media (min-width: 500px) {
+      .slider-overlay p {
+        font-size: 20px;
+        font-size: 1.25rem; } }
+    @media (min-width: 680px) {
+      .slider-overlay p {
+        font-size: 24px;
+        font-size: 1.5rem; } }
+    @media (min-width: 800px) {
+      .slider-overlay p {
+        font-size: 32px;
+        font-size: 2rem; } }
   .slider-overlay a {
     color: white;
     display: inline-block;
     border-bottom: 3px solid white;
-    -webkit-transition: 0.25s all ease;
-    transition: 0.25s all ease; }
+    -webkit-transition: color 0.25s ease, background-color 0.25s ease, border 0.25s ease;
+    transition: color 0.25s ease, background-color 0.25s ease, border 0.25s ease;
+    z-index: 100; }
     .slider-overlay a:hover {
       color: #bb001b;
       border-bottom-color: #bb001b;
@@ -1670,10 +1677,14 @@ LAYOUTS
       transition: 0.25s all ease;
       background-color: rgba(255, 255, 255, 0.85); }
 
-#home-slider img {
-  display: block;
-  max-width: 100%;
-  width: 100%; }
+.home-carousel {
+  height: 100vh;
+  width: 100vw;
+  position: fixed !important;
+  z-index: -1 !important; }
+  .home-carousel .owl-slide {
+    height: 100vh;
+    width: 100vw; }
 
 /*------- Single Gift Page -------*/
 .single-gift .entry-title {

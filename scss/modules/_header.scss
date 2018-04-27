@@ -1,5 +1,9 @@
+// TODO: Revise layout of header on Home Page
+
 .main-navigation {
   @extend .container;
+  background-color: white;
+  padding-top: 10px;
   @media (max-width: 599px) {
     position:relative;
   }
