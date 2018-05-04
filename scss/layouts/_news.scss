@@ -50,6 +50,9 @@
   .entry-title {
     @include font-size(2.2);
     font-weight: bold;
+    @media (min-width: 1000px) {
+      @include font-size(3);
+    }
   }
 
   .entry-organization {

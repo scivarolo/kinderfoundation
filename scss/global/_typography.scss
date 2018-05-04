@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
 	margin-bottom: .75em;
+  @media (min-width: 1000px) {
+    @include font-size(1.7);
+    line-height: 1.6;
+  }
 }
 
 b, strong {
