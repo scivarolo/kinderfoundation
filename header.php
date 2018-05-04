@@ -67,8 +67,20 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="container hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kinderfoundation' ); ?></a>
+
+
+  <?php if( is_front_page()  ) : ?>
+    <div class="home-nav-wrapper">
+      <nav id="site-navigation" class="main-navigation" role="navigation">
+        <div class="frontpage-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/kinderlogo.svg"></div>
+    		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+    	</nav><!-- #site-navigation -->
+    </div>
+    
+    <div id="page" class="container hfeed site">
+  <?php else : ?>
+    <div id="page" class="container hfeed site">
+    	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kinderfoundation' ); ?></a>
 
   <nav id="site-navigation" class="main-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -117,5 +129,6 @@
 	  </div>
 
 	</header><!-- #masthead -->
+  <?php endif; // not front page ?>
 
 	<div id="content" class="site-content">
