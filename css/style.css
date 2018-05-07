@@ -2035,4 +2035,27 @@ LAYOUTS
   .show-team-photos .entry-content {
     max-width: 74.7368421053%;
     margin: 0 auto; } }
+
+/*------- News Archives -------*/
+.archive-title {
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1em; }
+
+.column--organization {
+  max-width: 25%;
+  width: 225px; }
+
+.column--title .post-title {
+  font-family: "Bitter", serif;
+  font-size: 15px;
+  font-size: 0.9375rem; }
+
+.footable td {
+  padding: 9px;
+  border-bottom: 1px solid lightgray; }
+
+.entry-source {
+  display: inline-block; }
 /*# sourceMappingURL=style.css.map */

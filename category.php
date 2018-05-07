@@ -20,29 +20,29 @@ get_header(); ?>
         <table class="footable">
           <thead>
             <tr>
-              <th data-type="numeric">Date</th>
-              <th data-toggle="true">Title/Source</th>
-              <th data-hide="phone">Organization</th>
-              <th data-hide="phone">Category</th>
+              <th class="column--date" data-type="numeric">Date</th>
+              <th class="column--title" data-toggle="true">Title/Source</th>
+              <th class="column--organization" data-hide="phone">Organization</th>
+              <th class="column--category" data-hide="phone">Category</th>
             </tr>
           </thead>
           <tbody>
       			<?php /* Start the Loop */ ?>
       			<?php while ( have_posts() ) : the_post(); ?>
-  
+
       				<tr>
-      				  <td data-value="<?php the_time('U'); ?>"><?php the_time('m-d-Y'); ?></td>
-                <td><a href="<?php the_field('source_url'); ?>"><?php the_title(); ?></a> <?php if( get_field('source_name') ) : ?> <span class="entry-source">&mdash; <?php the_field('source_name'); ?> </span><?php endif; ?></td>
-                <td><?php echo get_the_term_list($post->ID, 'organization', '', ', '); ?></td>
-                <td><?php echo get_the_term_list($post->ID, 'gift_category', '', ', '); ?></td>
+      				  <td class="column--date" data-value="<?php the_time('U'); ?>"><?php the_time('m-d-Y'); ?></td>
+                <td class="column--title"><a class="post-title" href="<?php the_field('source_url'); ?>"><?php the_title(); ?></a> <?php if( get_field('source_name') ) : ?> <span class="entry-source">&mdash; <?php the_field('source_name'); ?> </span><?php endif; ?></td>
+                <td class="column--organization"><?php echo get_the_term_list($post->ID, 'organization', '', ', '); ?></td>
+                <td class="column--category"><?php echo get_the_term_list($post->ID, 'gift_category', '', ', '); ?></td>
       				</tr>
-  
+
       			<?php endwhile; ?>
           </tbody>
         </table>
-        
+
   			<?php kinderfoundation_paging_nav(); ?>
-      
+
   		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>

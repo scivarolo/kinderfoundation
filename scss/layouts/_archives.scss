@@ -1,0 +1,26 @@
+.archive-title {
+  @include font-size(3.2);
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.column--organization {
+  max-width: 25%;
+  width: 225px;
+}
+
+.column--title {
+  .post-title {
+    font-family: $serif;
+    @include font-size(1.5);
+  }
+}
+
+.footable td {
+  padding: 9px;
+  border-bottom: 1px solid lightgray;
+}
+
+.entry-source {
+  display: inline-block;
+}

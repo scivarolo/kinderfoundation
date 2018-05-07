@@ -584,6 +584,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/img\/kinderlogo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/kinderlogo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/logo.png": {
 		"ft": 32768,
 		"iS": 2821,
@@ -1007,6 +1017,19 @@
 		"ma": 1,
 		"oA": 0,
 		"oAP": "\/css\/ie8.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/layouts\/_archives.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/css\/_archives.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
