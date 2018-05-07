@@ -1873,7 +1873,8 @@ LAYOUTS
 
 .post .entry-header {
   border-left: 5px solid #bb001b;
-  padding-left: 3.2258064516%; }
+  padding-left: 3.2258064516%;
+  margin-bottom: 2em; }
   @media (min-width: 720px) {
     .post .entry-header {
       padding-right: 2.1276595745%; } }
@@ -1908,7 +1909,13 @@ LAYOUTS
   @media (min-width: 1000px) {
     .post .entry-header .entry-title {
       font-size: 30px;
-      font-size: 1.875rem; } }
+      font-size: 1.875rem;
+      line-height: 1.4; } }
+
+@media (min-width: 1000px) {
+  .single-blog .post .entry-header .entry-title {
+    font-size: 36px;
+    font-size: 2.25rem; } }
 
 .post .entry-header .entry-organization {
   text-transform: lowercase;
@@ -1923,16 +1930,18 @@ LAYOUTS
 
 .post .entry-content {
   border-left: 5px solid white;
-  padding-left: 3.2258064516%;
+  margin-left: 3.2258064516%;
   margin-top: 1em;
-  margin-bottom: 2em; }
+  margin-bottom: 3em;
+  padding-bottom: 3em;
+  border-bottom: rgba(128, 126, 130, 0.15) 1px solid; }
   .post .entry-content:after {
     content: "";
     display: table;
     clear: both; }
   @media (min-width: 720px) {
     .post .entry-content {
-      padding-right: 2.1276595745%;
+      margin-right: 2.1276595745%;
       margin-top: 1em; } }
 
 /*------- Category Archive -------*/

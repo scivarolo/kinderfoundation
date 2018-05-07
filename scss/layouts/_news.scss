@@ -23,6 +23,7 @@
   @media (min-width: 720px) {
     padding-right: gutter(6);
   }
+  margin-bottom: 2em;
 }
 
 .post .entry-header {
@@ -52,6 +53,13 @@
     font-weight: bold;
     @media (min-width: 1000px) {
       @include font-size(3);
+      line-height: 1.4;
+    }
+  }
+
+  .single-blog & .entry-title {
+    @media (min-width: 1000px) {
+      @include font-size(3.6);
     }
   }
 
@@ -69,12 +77,14 @@
 
 .post .entry-content {
   border-left: 5px solid white;
-  padding-left: gutter(4);
+  margin-left: gutter(4);
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  padding-bottom: 3em;
+  border-bottom: rgba($kinder-gray, .15) 1px solid;
   @include clearfix();
   @media (min-width: 720px) {
-    padding-right: gutter(6);
+    margin-right: gutter(6);
     margin-top: 1em;
   }
 }
