@@ -25,6 +25,7 @@
   font-weight: bold;
   text-transform: lowercase;
   color: $kinder-gray;
+  @include font-size(2.4);
 }
 
 .widget-post-link {
@@ -38,7 +39,7 @@
 }
 
 .widget-organization {
-  
+
 }
 
 .widget-gift-category {
@@ -50,4 +51,4 @@
 .widget-gift-category a {
   color: $kinder-gray;
   &:hover {color: $kinder-red;}
-} 
+}
