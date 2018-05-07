@@ -1612,15 +1612,26 @@ h2.resp-tab-active span.resp-arrow {
   background-color: #b2c92d;
   margin-top: 10px;
   font-size: 13px;
-  font-size: 0.8125rem; }
+  font-size: 0.8125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .site-footer:after {
     content: "";
     display: table;
     clear: both; }
 
-.footer-address {
-  float: left;
+.contact-button {
+  display: inline-block;
+  border-right: 3px solid white;
   padding: 7px 15px;
+  height: 100%; }
+
+.footer-address {
+  padding: 7px 0 0 15px;
   font-size: 12px;
   font-size: 0.75rem; }
   .footer-address p {
@@ -1628,15 +1639,9 @@ h2.resp-tab-active span.resp-arrow {
     color: white; }
 
 .site-info {
-  text-align: right;
-  float: right;
-  font-size: 12px;
-  font-size: 0.75rem; }
-  @media (max-width: 600px) {
-    .site-info {
-      width: 75%;
-      text-align: left;
-      float: left; } }
+  padding: 0 0 7px 15px;
+  font-size: 11px;
+  font-size: 0.6875rem; }
 
 .site-info,
 .site-footer a,
@@ -1646,17 +1651,31 @@ h2.resp-tab-active span.resp-arrow {
 .site-info p {
   margin: 0; }
 
-.contact-button {
-  display: block;
-  float: left;
-  border-right: 3px solid white; }
-  @media (max-width: 600px) {
-    .contact-button {
-      border-bottom: 3px solid white; } }
-
-.site-info,
-.contact-button {
-  padding: 7px 15px; }
+.footer-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 640px) {
+    .footer-text {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline; }
+      .footer-text > div {
+        padding: 7px 15px; } }
 
 /*--------------------------------------------
 LAYOUTS
