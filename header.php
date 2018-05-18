@@ -55,7 +55,7 @@
 
         <?php endif; ?>
 
-      background: linear-gradient(rgba(178, 201, 45, 0.85) 0%, rgba(178, 201, 45, 0.85) 100%), url(<?php echo $header_image; ?>);
+      background: linear-gradient(rgba(178, 201, 45, 0.65) 0%, rgba(178, 201, 45, 0.65) 100%), url(<?php echo $header_image; ?>);
       background-size: cover;
       background-position: center;
     <?php endif; ?>
@@ -67,68 +67,76 @@
 
 <body <?php body_class(); ?>>
 
+  <div class="home-nav-wrapper">
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <div class="frontpage-logo">
+        <a href="<?php echo esc_url( home_url('/') ); ?>" rel="home">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/kinderlogo.svg">
+        </a>
+      </div>
+  		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+  	</nav><!-- #site-navigation -->
+  </div>
 
+  <?php if( !is_front_page() ) : ?>
+  <header id="masthead" class="site-header" role="banner">
+    <div class="container">
+      <div class="kinder-logo">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/kinder-logo.png" alt="Kinder Foundation Logo" >
+        </a>
+      </div>
+      <div class="page-title">
 
-  <?php if( is_front_page()  ) : ?>
-    <div class="home-nav-wrapper">
-      <nav id="site-navigation" class="main-navigation" role="navigation">
-        <div class="frontpage-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/kinderlogo.svg"></div>
-    		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-    	</nav><!-- #site-navigation -->
-    </div>
-    
-    <div id="page" class="container hfeed site">
-  <?php else : ?>
-    <div id="page" class="container hfeed site">
-    	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kinderfoundation' ); ?></a>
+        <?php if( is_page() ) :
 
-  <nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- #site-navigation -->
+          $urbangreenspace = get_page_by_title('Urban Green Space');
+          $education = get_page_by_title('Education');
+          $qualityoflife = get_page_by_title('Quality of Life');
+          $aboutus = get_page_by_title('About Us');
 
-	<header id="masthead" class="site-header" role="banner">
-	  <div class="kinder-logo">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-  	    <img src="<?php echo get_template_directory_uri(); ?>/img/kinder-logo.png" alt="Kinder Foundation Logo" >
-      </a>
-	  </div>
-	  <div class="page-title">
+          ?>
+          <?php if( is_page('Major Gifts') ) : ?>
 
-      <?php if( is_page() ) :
+            <h1><?php the_field('major_gifts_heading', 'option'); ?></h1>
+            <h2><?php the_field('major_gifts_tagline', 'option'); ?></h2>
 
-	      $urbangreenspace = get_page_by_title('Urban Green Space');
-	      $education = get_page_by_title('Education');
-	      $qualityoflife = get_page_by_title('Quality of Life');
+           <?php elseif( is_tree( $urbangreenspace->ID ) ) : ?>
 
-	      ?>
-	      <?php if( is_page('Major Gifts') ) : ?>
+            <h1><?php the_field('urban_green_space_heading', 'option'); ?></h1>
+            <h2><?php the_field('urban_green_space_tagline', 'option'); ?></h2>
 
-	        <h1><?php the_field('major_gifts_heading', 'option'); ?></h1>
-	        <h2><?php the_field('major_gifts_tagline', 'option'); ?></h2>
+           <?php elseif( is_tree( $education->ID ) ) : ?>
 
-        <?php elseif( is_tree( $urbangreenspace->ID ) ) : ?>
+            <h1><?php the_field('education_heading', 'option'); ?></h1>
+            <h2><?php the_field('education_tagline', 'option'); ?></h2>
 
-          <h1><?php the_field('urban_green_space_heading', 'option'); ?></h1>
-	        <h2><?php the_field('urban_green_space_tagline', 'option'); ?></h2>
+           <?php elseif( is_tree( $qualityoflife->ID ) ) : ?>
 
-        <?php elseif( is_tree( $education->ID ) ) : ?>
+            <h1><?php the_field('quality_of_life_heading', 'option'); ?></h1>
+            <h2><?php the_field('quality_of_life_tagline', 'option'); ?></h2>
 
-          <h1><?php the_field('education_heading', 'option'); ?></h1>
-	        <h2><?php the_field('education_tagline', 'option'); ?></h2>
+           <?php elseif( is_tree( $aboutus->ID) ) : ?>
 
-        <?php elseif( is_tree( $qualityoflife->ID ) ) : ?>
+            <h1>About Us</h1>
+            <h2><?php the_title(); ?><h2>
 
-          <h1><?php the_field('quality_of_life_heading', 'option'); ?></h1>
-	        <h2><?php the_field('quality_of_life_tagline', 'option'); ?></h2>
+           <?php else : ?>
 
-        <?php else : endif; ?>
+          <?php endif; ?>
 
-	    <?php else : ?>
+        <?php elseif( is_blog() ) : ?>
+          <h1>News</h1>
+        <?php else : ?>
 
-  	   <?php endif; ?>
-	  </div>
+        <?php endif; ?>
+      </div>
+    </div><!--.container-->
+  </header><!-- #masthead -->
+  <?php endif; ?>
 
-	</header><!-- #masthead -->
-  <?php endif; // not front page ?>
+  <div id="page" class="container hfeed site">
 
-	<div id="content" class="site-content">
+  <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kinderfoundation' ); ?></a>
+
+<div id="content" class="site-content">

@@ -29,7 +29,10 @@ body {
 
 
 article.page {
-  margin: gutter(6);
+  margin: 2em 2.125% 2.125%;
+  @media (min-width: 960px) {
+    margin: 3em 2.125% 2.125%;
+  }
 }
 
 .site-content {

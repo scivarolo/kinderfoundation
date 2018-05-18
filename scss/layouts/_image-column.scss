@@ -3,7 +3,7 @@
     margin: gutter(4);
     padding-right: gutter(6);
     @media (min-width: 600px) {
-      margin: 0;
+      margin: 1.5em 0 0;
       @include span(7 of 12 last);
       padding-left: gutter(12);
     }
