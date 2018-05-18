@@ -320,3 +320,9 @@ function blog_custom_post_type() {
 
 // Hook into the 'init' action
 add_action( 'init', 'blog_custom_post_type', 0 );
+
+function is_blog () {
+	global  $post;
+	$posttype = get_post_type($post );
+	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post' || $posttype == 'blog')  ) ? true : false ;
+}
