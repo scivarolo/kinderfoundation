@@ -432,13 +432,6 @@
 		"oAP": "\/content-search.php",
 		"oF": 0
 		},
-	"\/content-single.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/content-single.php",
-		"oF": 0
-		},
 	"\/content.php": {
 		"cB": 0,
 		"ft": 8192,
