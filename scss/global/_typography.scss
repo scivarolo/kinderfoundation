@@ -26,6 +26,9 @@ p {
     @include font-size(1.7);
     line-height: 1.6;
   }
+  @media(min-width: 1200px) {
+    @include font-size(1.8);
+  }
 }
 
 b, strong {

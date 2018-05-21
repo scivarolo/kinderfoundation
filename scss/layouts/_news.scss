@@ -40,7 +40,7 @@
       @include font-size(1.4);
     }
   }
-  .entry-meta {
+  .entry-date {
     color: $kinder-green;
     @include font-size(1.6);
     font-family: $small-caps;
@@ -51,6 +51,7 @@
   .entry-title {
     @include font-size(2.2);
     font-weight: bold;
+    margin-bottom: 7px;
     @media (min-width: 1000px) {
       @include font-size(3);
       line-height: 1.4;
@@ -65,6 +66,7 @@
 
   .entry-organization {
     text-transform: lowercase;
+    display: inline-block;
     @include font-size(1.4);
   }
   .organization-label {
@@ -72,7 +74,15 @@
   }
   .entry-organization a {
     font-family: $serif;
+    display: inline-block;
+    background-color: rgba($kinder-green, 0.25);
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 6px 10px;
+    @include font-size(1.2);
   }
+  .org-comma { display: none; }
+
 }
 
 .post .entry-content {
@@ -82,9 +92,39 @@
   margin-bottom: 3em;
   padding-bottom: 3em;
   border-bottom: rgba($kinder-gray, .15) 1px solid;
+  h1, h2, h3, h4, h5, h6 {
+    clear: none;
+  }
   @include clearfix();
   @media (min-width: 720px) {
     margin-right: gutter(6);
     margin-top: 1em;
   }
+}
+
+.entry-date {
+  background: $kinder-green; /* fallback */
+  background: -webkit-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
+              -webkit-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
+              -webkit-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
+              -webkit-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
+  background: -moz-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
+              -moz-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
+              -moz-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
+              -moz-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
+  background: -o-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
+              -o-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
+              -o-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
+              -o-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
+  background: linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
+              linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
+              linear-gradient(225deg, transparent 7px, $kinder-green 7px),
+              linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
+  background-position: bottom left, top left, top right, bottom right;
+  background-size: 51% 50%;
+  background-repeat: no-repeat;
+  color: white !important;
+  padding: 10px 15px 7px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
