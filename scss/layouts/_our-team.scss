@@ -1,5 +1,5 @@
 .team-member__name {
-  @include font-size(2.4);
+  @include font-size(2.6);
 }
 
 .team-member__title {
@@ -42,16 +42,19 @@
 
 @media (min-width: 650px) {
   .team-member__headshot {
-    width: 30.4347826087%;
+    width: 25%;
     float: left;
     margin-top: 9px; }
 
   .bio-wrap {
     float: right;
-    width: 65.2173913043%;
-    margin-left: 4.347826087%; } }
+    width: 72%;
+    margin-left: 3%; } }
+
 @media (min-width: 850px) {
   .show-team-photos .entry-header,
   .show-team-photos .entry-content {
-    max-width: 74.7368421053%;
-    margin: 0 auto; } }
+    max-width: 75%;
+    margin: 0 auto;
+  }
+}

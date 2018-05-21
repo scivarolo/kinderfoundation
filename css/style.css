@@ -2055,8 +2055,8 @@ LAYOUTS
 
 /*------- Our Team Page -------*/
 .team-member__name {
-  font-size: 24px;
-  font-size: 1.5rem; }
+  font-size: 26px;
+  font-size: 1.625rem; }
 
 .team-member__title {
   font-family: "Anivers-SC", sans-serif;
@@ -2096,18 +2096,18 @@ LAYOUTS
 
 @media (min-width: 650px) {
   .team-member__headshot {
-    width: 30.4347826087%;
+    width: 25%;
     float: left;
     margin-top: 9px; }
   .bio-wrap {
     float: right;
-    width: 65.2173913043%;
-    margin-left: 4.347826087%; } }
+    width: 72%;
+    margin-left: 3%; } }
 
 @media (min-width: 850px) {
   .show-team-photos .entry-header,
   .show-team-photos .entry-content {
-    max-width: 74.7368421053%;
+    max-width: 75%;
     margin: 0 auto; } }
 
 /*------- News Archives -------*/
