@@ -640,9 +640,7 @@ big {
   .alignleft, .alignright {
     float: none;
     display: block;
-    margin-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto; } }
+    margin: 1em auto; } }
 
 .aligncenter {
   display: block;
