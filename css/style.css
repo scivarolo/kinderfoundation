@@ -2164,7 +2164,8 @@ LAYOUTS
   font-size: 32px;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-top: 1em; }
 
 .column--organization {
   max-width: 25%;
