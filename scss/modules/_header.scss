@@ -2,6 +2,9 @@
   @extend .container;
   background-color: rgba(white, 1);
   padding-top: 10px;
+  //.home & {
+    max-width: 100%;
+  //}
   @media (max-width: 599px) {
     position:relative;
   }
@@ -10,6 +13,7 @@
     margin: 0;
     padding: 0;
     display: flex;
+
     @media (max-width: 871px) {
       @include font-size(1.4);
     }
@@ -19,6 +23,7 @@
     @media (min-width: 800px) {
       width: (1 / 2) * 100% - .75;
       float:right;
+      max-width: 700px;
     }
     @media (min-width: 960px) {
       @include font-size(1.9);
@@ -258,7 +263,8 @@ ul.sub-menu {
     float: left;
     max-width: 50%;
     width: 350px;
-    margin: 20px 20px 0 20px;
+    //margin: 20px 20px 0 20px;
+    margin: 14px 20px 0 30px;
   }
   @media (min-width: 1100px) {
     width: 400px;

@@ -986,7 +986,8 @@ MODULES
 /*------- Header -------*/
 .main-navigation {
   background-color: white;
-  padding-top: 10px; }
+  padding-top: 10px;
+  max-width: 100%; }
   @media (max-width: 599px) {
     .main-navigation {
       position: relative; } }
@@ -1008,7 +1009,8 @@ MODULES
     @media (min-width: 800px) {
       .main-navigation > div > ul {
         width: 49.25%;
-        float: right; } }
+        float: right;
+        max-width: 700px; } }
     @media (min-width: 960px) {
       .main-navigation > div > ul {
         font-size: 19px;
@@ -1241,7 +1243,7 @@ ul.sub-menu {
     float: left;
     max-width: 50%;
     width: 350px;
-    margin: 20px 20px 0 20px; } }
+    margin: 14px 20px 0 30px; } }
 
 @media (min-width: 1100px) {
   .frontpage-logo {
