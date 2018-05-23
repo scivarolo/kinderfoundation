@@ -52,8 +52,8 @@ function kinderfoundation_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'kinderfoundation' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'kinderfoundation' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'kinderfoundation' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;Previous Post', 'Previous post link', 'kinderfoundation' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( 'Next Post&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'kinderfoundation' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
