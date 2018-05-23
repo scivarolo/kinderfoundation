@@ -32,7 +32,7 @@ get_header(); ?>
             <?php if(get_post_type() == 'blog') { $url = get_the_permalink(); } else { $url = get_field('source_url'); } ?>
     				<tr>
     				  <td class="column--date" data-value="<?php the_time('U'); ?>"><?php the_time('m-d-Y'); ?></td>
-              <td class="column--title"><a class="post-title" href="<?php echo $url; ?>"><?php the_title(); ?></a> <?php if( get_field('source_name') ) : ?> <span class="entry-source">&mdash; <?php the_field('source_name'); ?> </span><?php endif; ?></td>
+              <td class="column--title"><a class="post-title" href="<?php echo $url; ?>" <?php if(get_post_type() != 'blog') { ?> target="_blank" <?php } ?>><?php the_title(); ?></a> <?php if( get_field('source_name') ) : ?> <span class="entry-source">&mdash; <?php the_field('source_name'); ?> </span><?php endif; ?></td>
               <td class="column--organization"><?php echo get_the_term_list($post->ID, 'organization', '', ', '); ?></td>
               <td class="column-category"><?php echo get_the_term_list($post->ID, 'gift_category', '', ', '); ?></td>
     				</tr>
