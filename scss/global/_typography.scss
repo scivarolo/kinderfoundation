@@ -21,7 +21,8 @@ p {
 	margin-bottom: .75em;
 }
 
-.site-content p {
+.site-content p,
+.entry-content {
   @media (min-width: 1000px) {
     @include font-size(1.7);
     line-height: 1.6;

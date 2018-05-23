@@ -535,13 +535,15 @@ p {
   margin-bottom: .75em; }
 
 @media (min-width: 1000px) {
-  .site-content p {
+  .site-content p,
+  .entry-content {
     font-size: 17px;
     font-size: 1.0625rem;
     line-height: 1.6; } }
 
 @media (min-width: 1200px) {
-  .site-content p {
+  .site-content p,
+  .entry-content {
     font-size: 18px;
     font-size: 1.125rem; } }
 
