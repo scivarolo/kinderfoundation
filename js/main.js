@@ -4,7 +4,9 @@ jQuery(document).ready(function() {
     items: 1,
     loop: true,
     animateOut: 'fadeOut',
-    autoplay: true
+    autoplay: true,
+    lazyLoad: true,
+    lazyLoadEager: 1
   });
 
   jQuery('.entry-slippry').slippry({

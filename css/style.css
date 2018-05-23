@@ -1771,6 +1771,9 @@ LAYOUTS
   .home-carousel .owl-slide {
     height: 100vh;
     width: 100vw; }
+  .home-carousel.owl-carousel .owl-item .owl-lazy:not([src]),
+  .home-carousel.owl-carousel .owl-item .owl-lazy[src^=""] {
+    max-height: inherit; }
 
 .home-nav-wrapper {
   background-color: white; }
