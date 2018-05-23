@@ -1944,13 +1944,22 @@ LAYOUTS
       color: gray; }
 
 .post .entry-header .entry-date {
-  color: #b2c92d;
   font-size: 16px;
   font-size: 1rem;
   font-family: "Anivers-SC", sans-serif;
   text-transform: lowercase;
   letter-spacing: 1px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  background: #bb001b;
+  /* fallback */
+  background: linear-gradient(45deg, #bb001b 7px, #bb001b 7px), linear-gradient(135deg, #bb001b 7px, #bb001b 7px), linear-gradient(225deg, transparent 7px, #bb001b 7px), linear-gradient(315deg, #bb001b 7px, #bb001b 7px);
+  background-position: bottom left, top left, top right, bottom right;
+  background-size: 52% 52%;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 10px 15px 7px;
+  margin-bottom: 10px;
+  display: inline-block; }
 
 .post .entry-header .entry-title {
   font-size: 22px;
@@ -2008,17 +2017,46 @@ LAYOUTS
       margin-right: 2.1276595745%;
       margin-top: 1em; } }
 
-.entry-date {
+.more-link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   background: #b2c92d;
   /* fallback */
   background: linear-gradient(45deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(135deg, #b2c92d 7px, #b2c92d 7px), linear-gradient(225deg, transparent 7px, #b2c92d 7px), linear-gradient(315deg, #b2c92d 7px, #b2c92d 7px);
-  background-position: bottom left, top left, top right, bottom right;
-  background-size: 51% 50%;
+  background-position: bottom left, bottom right, top right, top left;
+  background-size: 52% 52%;
   background-repeat: no-repeat;
-  color: white !important;
-  padding: 10px 15px 7px;
-  margin-bottom: 10px;
-  display: inline-block; }
+  padding: 11px 15px 7px 25px;
+  white-space: nowrap;
+  line-height: 1;
+  color: white;
+  position: relative;
+  font-size: 14px;
+  font-size: 0.875rem;
+  display: table;
+  margin-right: auto;
+  margin-top: 1.5em; }
+  .more-link:after {
+    content: '';
+    background-image: url("../img/button-bullet.png");
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 50%;
+    height: 100%;
+    width: 15px;
+    position: absolute;
+    left: 10px;
+    top: 0; }
+  .more-link:hover, .more-link:focus, .more-link:active {
+    background: #91a325;
+    background: linear-gradient(45deg, #91a325 7px, #91a325 7px), linear-gradient(135deg, #91a325 7px, #91a325 7px), linear-gradient(225deg, transparent 7px, #91a325 7px), linear-gradient(315deg, #91a325 7px, #91a325 7px);
+    background-position: bottom left, bottom right, top right, top left;
+    background-size: 52% 52%;
+    background-repeat: no-repeat; }
+  .more-link:visited {
+    color: white; }
+  .more-link:hover {
+    color: white; }
 
 /*------- Category Archive -------*/
 .archive .content-area,

@@ -41,12 +41,35 @@
     }
   }
   .entry-date {
-    color: $kinder-green;
     @include font-size(1.6);
     font-family: $small-caps;
     text-transform: lowercase;
     letter-spacing: 1px;
     line-height: 1.2;
+    background: $kinder-red; /* fallback */
+    background: -webkit-linear-gradient(45deg, $kinder-red 7px, $kinder-red 7px),
+                -webkit-linear-gradient(135deg, $kinder-red 7px, $kinder-red 7px),
+                -webkit-linear-gradient(225deg, transparent 7px, $kinder-red 7px),
+                -webkit-linear-gradient(315deg, $kinder-red 7px, $kinder-red 7px);
+    background: -moz-linear-gradient(45deg, $kinder-red 7px, $kinder-red 7px),
+                -moz-linear-gradient(135deg, $kinder-red 7px, $kinder-red 7px),
+                -moz-linear-gradient(225deg, transparent 7px, $kinder-red 7px),
+                -moz-linear-gradient(315deg, $kinder-red 7px, $kinder-red 7px);
+    background: -o-linear-gradient(45deg, $kinder-red 7px, $kinder-red 7px),
+                -o-linear-gradient(135deg, $kinder-red 7px, $kinder-red 7px),
+                -o-linear-gradient(225deg, transparent 7px, $kinder-red 7px),
+                -o-linear-gradient(315deg, $kinder-red 7px, $kinder-red 7px);
+    background: linear-gradient(45deg, $kinder-red 7px, $kinder-red 7px),
+                linear-gradient(135deg, $kinder-red 7px, $kinder-red 7px),
+                linear-gradient(225deg, transparent 7px, $kinder-red 7px),
+                linear-gradient(315deg, $kinder-red 7px, $kinder-red 7px);
+    background-position: bottom left, top left, top right, bottom right;
+    background-size: 52% 52%;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 10px 15px 7px;
+    margin-bottom: 10px;
+    display: inline-block;
   }
   .entry-title {
     @include font-size(2.2);
@@ -102,29 +125,13 @@
   }
 }
 
-.entry-date {
-  background: $kinder-green; /* fallback */
-  background: -webkit-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
-              -webkit-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
-              -webkit-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
-              -webkit-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
-  background: -moz-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
-              -moz-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
-              -moz-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
-              -moz-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
-  background: -o-linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
-              -o-linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
-              -o-linear-gradient(225deg, transparent 7px, $kinder-green 7px),
-              -o-linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
-  background: linear-gradient(45deg, $kinder-green 7px, $kinder-green 7px),
-              linear-gradient(135deg, $kinder-green 7px, $kinder-green 7px),
-              linear-gradient(225deg, transparent 7px, $kinder-green 7px),
-              linear-gradient(315deg, $kinder-green 7px, $kinder-green 7px);
-  background-position: bottom left, top left, top right, bottom right;
-  background-size: 51% 50%;
-  background-repeat: no-repeat;
-  color: white !important;
-  padding: 10px 15px 7px;
-  margin-bottom: 10px;
-  display: inline-block;
+.more-link {
+  @include button;
+  @include font-size(1.4);
+  display: table;
+  margin-right: auto;
+  margin-top: 1.5em;
+  &:hover {
+    color: white;
+  }
 }
