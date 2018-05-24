@@ -56,6 +56,7 @@
         <?php endif; ?>
 
       background: linear-gradient(rgba(178, 201, 45, 0.65) 0%, rgba(178, 201, 45, 0.65) 100%), url(<?php echo $header_image; ?>);
+      background: url(<?php echo $header_image; ?>);
       background-size: cover;
       background-position: center;
     <?php endif; ?>
