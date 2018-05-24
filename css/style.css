@@ -2079,7 +2079,7 @@ LAYOUTS
   margin: 3.2258064516%; }
   @media (min-width: 600px) {
     .image-column {
-      margin: 0;
+      margin: 1em 0 0;
       width: 41.0526315789%;
       float: left;
       margin-right: 1.0526315789%; } }

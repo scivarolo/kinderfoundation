@@ -13,7 +13,7 @@
 .image-column {
   margin: gutter(4);
   @media (min-width: 600px) {
-    margin: 0;
+    margin: 1em 0 0;
     @include span(5 of 12);
   }
   img {
