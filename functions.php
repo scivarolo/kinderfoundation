@@ -101,7 +101,7 @@ add_action( 'widgets_init', 'kinderfoundation_widgets_init' );
 function kinderfoundation_scripts() {
   wp_enqueue_style( 'kinder-owl-css', get_stylesheet_directory_uri() . '/css/owl.carousel.min.css');
   wp_enqueue_style( 'kinder-owl-theme-css', get_stylesheet_directory_uri() . '/css/owl.theme.default.min.css');
-  wp_enqueue_style( 'kinderfoundation-style', get_stylesheet_uri(), array(), '17.12.20' );
+  wp_enqueue_style( 'kinderfoundation-style', get_stylesheet_uri(), array(), '18.5.24' );
 
 	/* wp_enqueue_script( 'kinderfoundation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true ); */
   wp_enqueue_script('jquery');
