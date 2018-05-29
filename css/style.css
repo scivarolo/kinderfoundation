@@ -729,6 +729,7 @@ big {
 
 /*------- Global Layout Styles -------*/
 .container, .main-navigation {
+  width: 100%;
   max-width: 90rem;
   margin: 0 auto; }
   .container:after, .main-navigation:after {
