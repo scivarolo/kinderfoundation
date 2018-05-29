@@ -86,7 +86,7 @@ $aboutus = get_page_by_title('About Us'); ?>
       background: linear-gradient(rgba(178, 201, 45, 0.65) 0%, rgba(178, 201, 45, 0.65) 100%), url(<?php echo $header_image; ?>);
       background: url(<?php echo $header_image; ?>);
       background-size: cover;
-      background-position: center 80%;
+      background-position: center 60%;
     <?php endif; ?>
     <?php  ?>
   }
