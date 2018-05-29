@@ -1731,8 +1731,7 @@ LAYOUTS
 /*------- Global Layouts -------*/
 /*------- Home Page -------*/
 .slider-overlay {
-  position: absolute;
-  padding: 25px;
+  padding: 1.5em 2em 2em 2em;
   z-index: 500;
   background: #bb001b;
   background-color: rgba(187, 0, 27, 0.75);
