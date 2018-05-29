@@ -100,27 +100,31 @@
           <?php if( is_page('Major Gifts') ) : ?>
 
             <h1><?php the_field('major_gifts_heading', 'option'); ?></h1>
-            <h2><?php the_field('major_gifts_tagline', 'option'); ?></h2>
+            <?php if(get_field('major_gifts_tagline', 'option')) : ?>
+              <h2><?php the_field('major_gifts_tagline', 'option'); ?></h2>
+            <?php endif; ?>
 
            <?php elseif( is_tree( $urbangreenspace->ID ) ) : ?>
 
             <h1><?php the_field('urban_green_space_heading', 'option'); ?></h1>
-            <h2><?php the_field('urban_green_space_tagline', 'option'); ?></h2>
-
+            <?php if(get_field('urban_green_space_heading', 'option')) : ?>
+              <h2><?php the_field('urban_green_space_tagline', 'option'); ?></h2>
+            <?php endif; ?>
            <?php elseif( is_tree( $education->ID ) ) : ?>
 
             <h1><?php the_field('education_heading', 'option'); ?></h1>
-            <h2><?php the_field('education_tagline', 'option'); ?></h2>
-
+            <?php if(get_field('education_heading', 'option')) : ?>
+              <h2><?php the_field('education_tagline', 'option'); ?></h2>
+            <?php endif; ?>
            <?php elseif( is_tree( $qualityoflife->ID ) ) : ?>
 
             <h1><?php the_field('quality_of_life_heading', 'option'); ?></h1>
-            <h2><?php the_field('quality_of_life_tagline', 'option'); ?></h2>
-
+            <?php if(get_field('quality_of_life_heading', 'option') ) : ?>
+              <h2><?php the_field('quality_of_life_tagline', 'option'); ?></h2>
+            <?php endif; ?>
            <?php elseif( is_tree( $aboutus->ID) ) : ?>
 
             <h1>About Us</h1>
-            <h2><?php the_title(); ?><h2>
 
            <?php else : ?>
 
