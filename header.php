@@ -38,6 +38,11 @@
   <link rel="stylesheet" href="/wordpress/wp-content/themes/kinderfoundation/css/ie8.css" /></noscript>
 <![endif]-->
 
+<?php
+$urbangreenspace = get_page_by_title('Urban Green Space');
+$education = get_page_by_title('Education');
+$qualityoflife = get_page_by_title('Quality of Life');
+$aboutus = get_page_by_title('About Us'); ?>
 
 <style>
   .site-header {
@@ -45,15 +50,38 @@
 
     <?php if( !is_front_page() ) : ?>
 
-      <?php if( get_field( 'header_image' ) ) : ?>
+      <?php if( get_field( 'header_image' ) ) :
 
-        <?php $header_image = get_field('header_image'); ?>
+        $header_image = get_field('header_image');
 
-        <?php else : ?>
+      elseif( is_tree($aboutus->ID)) :
+        $header_image = get_field('about_us_header_image', 'option');
+        $header_image = $header_image['sizes']['header-background'];
 
-        <?php $header_image = get_field('header_image', 'option'); ?>
+      elseif( is_tree($urbangreenspace->ID) && get_field('green_space_header_image', 'option') ) :
+        $header_image = get_field('green_space_header_image', 'option');
+        $header_image = $header_image['sizes']['header-background'];
 
-        <?php endif; ?>
+      elseif( is_tree($education->ID) && get_field('education_header_image', 'option') ) :
+        $header_image = get_field('education_header_image', 'option');
+        $header_image = $header_image['sizes']['header-background'];
+
+      elseif( is_tree($qualityoflife->ID) && get_field('quality_of_life_header_image', 'option') ) :
+        $header_image = get_field('quality_of_life_header_image', 'option');
+        $header_image = $header_image['sizes']['header-background'];
+
+      elseif( is_blog() && get_field('news_header_image', 'option') ) :
+        $header_image = get_field('news_header_image', 'option');
+        $header_image = $header_image['sizes']['header-background'];
+
+      ?>
+
+      <?php else : ?>
+
+      <?php $header_image = get_field('header_image', 'option');
+      $header_image = $header_image['sizes']['header-background']; ?>
+
+      <?php endif; ?>
 
       background: linear-gradient(rgba(178, 201, 45, 0.65) 0%, rgba(178, 201, 45, 0.65) 100%), url(<?php echo $header_image; ?>);
       background: url(<?php echo $header_image; ?>);
@@ -89,14 +117,8 @@
       </div>
       <div class="page-title">
 
-        <?php if( is_page() ) :
+        <?php if( is_page() ) : ?>
 
-          $urbangreenspace = get_page_by_title('Urban Green Space');
-          $education = get_page_by_title('Education');
-          $qualityoflife = get_page_by_title('Quality of Life');
-          $aboutus = get_page_by_title('About Us');
-
-          ?>
           <?php if( is_page('Major Gifts') ) : ?>
 
             <h1><?php the_field('major_gifts_heading', 'option'); ?></h1>

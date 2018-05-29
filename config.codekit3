@@ -31,10 +31,26 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_54515caf00622.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_54515caf00622-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/acf-json\/group_570c1b23bdedc.json": {
 		"ft": 524288,
 		"oA": 1,
 		"oAP": "\/acf-json\/group_570c1b23bdedc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/acf-json\/group_5b0dc1501e570.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5b0dc1501e570-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -1295,6 +1311,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-leftimages.php",
+		"oF": 0
+		},
+	"\/template-majorgifts.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-majorgifts.php",
 		"oF": 0
 		},
 	"\/template-team.php": {
