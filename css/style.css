@@ -729,7 +729,7 @@ big {
 
 /*------- Global Layout Styles -------*/
 .container, .main-navigation {
-  max-width: 90em;
+  max-width: 90rem;
   margin: 0 auto; }
   .container:after, .main-navigation:after {
     content: " ";
@@ -748,7 +748,6 @@ body {
   min-height: 100vh; }
 
 #page.container, #page.main-navigation {
-  width: 96%;
   position: relative;
   background-color: white;
   -webkit-box-flex: 1;
@@ -1659,7 +1658,6 @@ h2.resp-tab-active span.resp-arrow {
 /*------- Footer -------*/
 .site-footer {
   background-color: #b2c92d;
-  margin-top: 10px;
   font-size: 13px;
   font-size: 0.8125rem;
   display: -webkit-box;

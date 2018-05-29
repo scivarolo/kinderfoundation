@@ -1,5 +1,5 @@
 .container {
-  max-width: 90em;
+  max-width: 90rem;
   margin: 0 auto;
   &:after {
     content: " ";
@@ -16,10 +16,8 @@ body {
 }
 
 #page.container {
-  width: 96%;
   position:relative;
   background-color: white;
-  //padding-top: 10px;
   flex: 1;
   .home & {
     background: none;
