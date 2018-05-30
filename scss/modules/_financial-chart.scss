@@ -1,3 +1,20 @@
+@media (min-width: 768px) {
+  .page-financials {
+    .entry-header {
+      width: 30%;
+      float: left;
+    }
+    .financials-text {
+      width: 66%;
+      float: right;
+    }
+  }
+}
+
+.financials-text {
+  margin: 1.5em 0 3em;
+}
+
 .financial-tabs-wrapper {
   @media (min-width: 768px) {
     @include span(8 of 12 last);
@@ -43,9 +60,9 @@
   text-align:right;
 }
 
-.financials-note,
+.financials-note p,
 .future-message {
-  @include font-size(1.4);
+  @include font-size(1.2);
   margin-bottom: 10px;
 }
 

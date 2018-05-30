@@ -1456,6 +1456,17 @@ ul.sub-menu {
 
 /*------- Financials Chart -------*/
 @media (min-width: 768px) {
+  .page-financials .entry-header {
+    width: 30%;
+    float: left; }
+  .page-financials .financials-text {
+    width: 66%;
+    float: right; } }
+
+.financials-text {
+  margin: 1.5em 0 3em; }
+
+@media (min-width: 768px) {
   .financial-tabs-wrapper {
     width: 66.3157894737%;
     float: right;
@@ -1495,10 +1506,10 @@ ul.sub-menu {
   display: block;
   text-align: right; }
 
-.financials-note,
+.financials-note p,
 .future-message {
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 12px;
+  font-size: 0.75rem;
   margin-bottom: 10px; }
 
 h2.resp-accordion {
