@@ -51,10 +51,14 @@
     width: 72%;
     margin-left: 3%; } }
 
-@media (min-width: 850px) {
-  .show-team-photos .entry-header,
+@media (min-width: 768px) {
+  .show-team-photos .entry-header {
+    width: 30%;
+    float: left;
+  }
   .show-team-photos .entry-content {
-    max-width: 75%;
-    margin: 0 auto;
+    width: 66%;
+    float: right;
+    margin-top: 1em;
   }
 }
