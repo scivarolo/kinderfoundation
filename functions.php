@@ -268,6 +268,12 @@ if( function_exists('acf_add_options_page') ) {
    'menu_slug'    => 'page-headings',
    'position'     => 21
   ));
+  acf_add_options_page(array(
+   'page_title'   => 'Social Media',
+   'menu_title'   => 'Social Media',
+   'menu_slug'    => 'Social Media',
+   'position'     => 22
+  ));
 }
 
 // Register Custom Post Type

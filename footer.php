@@ -20,12 +20,21 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<a class="contact-button" href="<?php echo esc_url( get_permalink( get_page_by_title( 'Contact Us' ) ) ); ?>">CONTACT</a>
+
+    <?php if(have_rows('social_media_links', 'option') ) : ?>
+    <div class="footer-social">
+      <?php while(have_rows('social_media_links', 'option') ) : the_row(); ?>
+        <a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('icon'); ?></a>
+      <?php endwhile; ?>
+    </div>
+    <?php endif; ?>
+
     <div class="footer-text">
       <div class="footer-address">
-        <p>2229 San Felipe, Suite 1700, Houston, TX 77019</p>
+        <p><span>2229 San Felipe, Suite 1700, </span><span>Houston, TX 77019</span></p>
       </div>
       <div class="site-info">
-  			<p>&copy; <?php echo date('Y'); ?> Kinder Foundation. Site by <a href="http://www.coredesignstudio.com/" target="_blank" rel="designer">CORE Design Studio</a></p>
+  			<p><span>&copy; <?php echo date('Y'); ?> Kinder Foundation. </span><span>Site by <a href="http://www.coredesignstudio.com/" target="_blank" rel="designer">CORE Design Studio</a></span></p>
   		</div><!-- .site-info -->
     </div>
 	</footer><!-- #colophon -->
