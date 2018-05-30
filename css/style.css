@@ -901,7 +901,8 @@ dd {
 embed,
 iframe,
 object,
-img {
+img,
+figure {
   max-width: 100%; }
 
 .wp-caption-text {

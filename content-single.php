@@ -30,6 +30,17 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+    <?php if(has_post_thumbnail()) : ?>
+      <?php $thumb_data = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "medium" ); ?>
+      <figure class="wp-caption alignright" style="width: <?php echo $thumb_data[1]; ?>px;">
+        <a href="<?php the_post_thumbnail_url('full'); ?>"><?php the_post_thumbnail('medium'); ?></a>
+        <?php if(get_the_post_thumbnail_caption()) : ?>
+          <figcaption class="wp-caption-text">
+            <?php the_post_thumbnail_caption(); ?>
+          </figcaption>
+        <?php endif; ?>
+      </figure>
+    <?php endif; ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
