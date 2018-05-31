@@ -23,7 +23,6 @@
 
 <link href='https://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?v=1.2">
 <!--TODO: Replace Major Gift Slider with Owl Carousel -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/slippry.css">
 
