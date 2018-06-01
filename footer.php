@@ -24,7 +24,7 @@
     <?php if(have_rows('social_media_links', 'option') ) : ?>
     <div class="footer-social">
       <?php while(have_rows('social_media_links', 'option') ) : the_row(); ?>
-        <a href="<?php the_sub_field('url'); ?>"><?php the_sub_field('icon'); ?></a>
+        <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('icon'); ?></a>
       <?php endwhile; ?>
     </div>
     <?php endif; ?>
