@@ -20,27 +20,26 @@ get_header(); ?>
 
   <?php if ( $gift_categories->have_posts() ) : ?>
 
-    <ul class="gift-grid">
 
     <?php while ( $gift_categories->have_posts() ) : $gift_categories->the_post(); ?>
 
-      <li class="category-header">
-        <div>
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <h3>
-            <?php $current_id = get_the_id();  ?>
-            <?php if( $current_id == 12 && get_field('urban_green_space_tagline', 'option') ) :
-              the_field('urban_green_space_tagline', 'option');
-            elseif( $current_id == 14 && get_field('education_tagline', 'option') ) :
-              the_field('education_tagline', 'option');
-             else :
-              if(get_field('quality_of_life_tagline', 'option') ) { the_field('quality_of_life_tagline', 'option'); };
-             endif; ?>
-          </h3>
+      <div class="category-header">
+        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h3>
+          <?php $current_id = get_the_id();  ?>
+          <?php if( $current_id == 12 && get_field('urban_green_space_tagline', 'option') ) :
+            the_field('urban_green_space_tagline', 'option');
+          elseif( $current_id == 14 && get_field('education_tagline', 'option') ) :
+            the_field('education_tagline', 'option');
+           else :
+            if(get_field('quality_of_life_tagline', 'option') ) { the_field('quality_of_life_tagline', 'option'); };
+           endif; ?>
+        </h3>
 
-        </div>
-        <img src="//placehold.it/400x300/ffffff/ffffff">
-      </li>
+      </div>
+
+
+    <ul class="gift-grid">
 
       <?php
       //Get the ID of the current Category to use in the query of the children
@@ -77,9 +76,11 @@ get_header(); ?>
 
       <?php $gift_categories->reset_postdata(); ?>
 
+      </ul> <!-- .gift-grid -->
+      
     <?php endwhile; /* $giftcategories */ ?>
 
-    </ul> <!-- .gift-grid -->
+
 
     <?php else : ?>
 

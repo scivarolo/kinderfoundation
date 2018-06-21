@@ -1282,7 +1282,7 @@ ul.sub-menu {
 /*------- Gifts Grid -------*/
 .gift-grid {
   list-style: none;
-  margin: 2.1276595745%;
+  margin: 2.125%;
   padding: 0; }
   .gift-grid:after {
     content: "";
@@ -1291,7 +1291,7 @@ ul.sub-menu {
   .gift-grid > li {
     overflow: hidden;
     display: block;
-    margin-bottom: 2.1276595745%; }
+    margin-bottom: 2%; }
     @media (min-width: 436px) {
       .gift-grid > li {
         width: 48.9361702128%;
@@ -1309,7 +1309,7 @@ ul.sub-menu {
       .gift-grid > li {
         width: 32.6315789474%;
         float: left;
-        margin-bottom: 1.0526315789%; }
+        margin-bottom: 1.25%; }
         .gift-grid > li:nth-child(3n + 1) {
           margin-left: 0;
           margin-right: -100%;
@@ -1325,28 +1325,13 @@ ul.sub-menu {
           clear: none; } }
 
 .category-header {
-  position: relative;
-  height: 100%;
-  width: 100%; }
-  .category-header div {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 10px 10px 10px 15px;
-    border-left: 5px solid #b2c92d; }
-  .category-header img {
-    visibility: hidden;
-    max-width: 100%;
-    display: block; }
-    @media (max-width: 436px) {
-      .category-header img {
-        height: 150px; } }
+  margin: 6% 2.125% 3.25%; }
   .category-header h2 {
-    font-size: 36px;
-    font-size: 2.25rem;
+    font-size: 56px;
+    font-size: 3.5rem;
     font-weight: bold;
     line-height: 1.1; }
-    @media (min-width: 436px) and (max-width: 585px) {
+    @media (min-width: 436px) and (max-width: 768px) {
       .category-header h2 {
         font-size: 28px;
         font-size: 1.75rem; } }
