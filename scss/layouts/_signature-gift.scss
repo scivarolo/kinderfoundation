@@ -1,0 +1,227 @@
+.page-template-template-gift .site-content {
+  margin-bottom: 0;
+}
+
+article.signature-gift {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.sg__header {
+  width: 60rem;
+  margin: 4rem auto;
+  .entry-title { padding-left: 0; }
+  .sg__introduction {
+    margin-top: 2rem;
+    p {
+      @include font-size(2.8);
+      font-family: $serif;
+    }
+  }
+}
+
+.sg__header,
+.sg__signature-image,
+.sg__signature-slider,
+.sg__text-block .wrapper,
+.sg__news .wrapper {
+  max-width: 90%;
+}
+
+.sg__entry-content {
+  > div:nth-of-type(even) {
+    background-color: rgba($kinder-gray, .05);
+  }
+}
+
+
+
+.sg__signature-image,
+.sg__signature-slider {
+  margin: 0 auto;
+  img {
+    width: 100%;
+    display:block;
+  }
+}
+
+.sg__text-block {
+  .wrapper {
+    width: 60rem;
+    margin: 0 auto;
+  }
+  background-color: rgba($kinder-gray, .05);
+  padding: 4rem 1rem;
+}
+
+.sg__signature-image,
+.sg__signature-slider {
+  + .sg__text-block {
+    margin-top: -15rem;
+    padding-top: 19rem;
+  }
+}
+
+.sg__section-heading {
+  @include font-size(3.2);
+  color: $kinder-green;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sg__callout {
+  padding: 4rem 0;
+  .wrapper {
+    max-width: 90%;
+    width: 50rem;
+    margin: 0 auto;
+  }
+  .sg__callout-text {
+    font-family: $serif;
+    color: $kinder-green;
+    border-left: 3px solid $kinder-green;
+    padding-left: 1rem;
+    margin-bottom: 1em;
+    font-weight: bold;
+    line-height: 1.7;
+    @include font-size(2);
+    @media (min-width: 720px) {
+      @include font-size(2.4);
+    }
+  }
+  .sg__callout-byline {
+    @include font-size(1.4);
+    color: rgba($kinder-gray, 0.5);
+    padding-left: 1rem;
+    max-width: 600px;
+  }
+}
+
+.sg__text-image-row {
+  display: flex;
+  flex-direction: column;
+  > div {
+    align-items: stretch;
+  }
+  .row__text-block {
+    padding: 4.25% 4.25% 5.25%;
+    order: 2;
+  }
+  .row__image-block {
+    .single-image {
+      height: 100%;
+      min-height: 400px;
+      background-position: center center;
+    }
+  }
+  @media (min-width: 720px) {
+    flex-direction: row;
+    > div {
+      width: 50%;
+    }
+    &:nth-of-type(even) {
+      .row__image-block {
+        order: 2;
+      }
+    }
+  }
+  .sg__link {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+
+.block-carousel {
+  position:relative;
+  height: 100%;
+  min-height: 300px;
+  div:not(.owl-controls) {
+    height: 100%;
+  }
+  &.owl-carousel .owl-item .owl-lazy:not([src]),
+  &.owl-carousel .owl-item .owl-lazy[src^=""] {
+    max-height: inherit;
+    min-height: 300px;
+  }
+  .owl-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    &:hover .owl-prev,
+    &:hover .owl-next {
+      display: block;
+    }
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      display: none;
+      opacity: .7;
+      transition: .25s all ease;
+      &:hover {
+        opacity: 1;
+      }
+      &::after {
+        content: "";
+        background-image: url('../img/arrows.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        text-indent: 0;
+        line-height: 2.4em;
+        color: #111;
+        font-weight: 800;
+        position: absolute;
+        background-color: rgba(0,0,0,0.8);
+        width: 2.4em;
+        height: 2.4em;
+        left: 50%;
+        top: 50%;
+        margin-top: -1.2em;
+        margin-left: -1.2em;
+      }
+    }
+
+    .owl-prev {
+      left: 8%;
+      &::after {
+        background-position: -5% 0;
+      }
+    }
+    .owl-next {
+      right: 8%;
+      &::after {
+        background-position: 105% 0;
+      }
+    }
+  }
+  .owl-caption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.54);
+    color: white;
+    padding: .6em 1em .4em 1em;
+    right: 0;
+    left: 0;
+  }
+}
+
+
+.sg__news .wrapper {
+  width: 60rem;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.sg__news-links {
+  margin-left: 0;
+  list-style: none;
+  @media (min-width: 720px) { columns: 2; }
+  li {
+    break-inside: avoid-column;
+    margin-bottom: 0.65rem;
+  }
+  .source {
+    display: block;
+  }
+}

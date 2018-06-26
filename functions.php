@@ -42,6 +42,7 @@ function kinderfoundation_setup() {
 	set_post_thumbnail_size(400, 300, true);
 	add_image_size('header-background', 1000, 400, true);
 	add_image_size('homepage', 1400, 1400, false);
+  add_image_size('signature-slide', 1300, 600, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
