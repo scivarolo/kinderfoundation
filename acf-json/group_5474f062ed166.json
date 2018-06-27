@@ -1,13 +1,13 @@
 {
-    "key": "group_542dc9aee4f62",
-    "title": "Gallery",
+    "key": "group_5474f062ed166",
+    "title": "Quote",
     "fields": [
         {
-            "key": "field_542dc9b63d5fb",
-            "label": "gallery",
-            "name": "gallery",
-            "type": "gallery",
-            "instructions": "",
+            "key": "field_5474f0686dc0f",
+            "label": "Quote Underneath Gallery",
+            "name": "quote",
+            "type": "textarea",
+            "instructions": "To omit, just leave this blank.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,18 +15,13 @@
                 "class": "",
                 "id": ""
             },
-            "min": "",
-            "max": "",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": "",
-            "insert": "append"
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -65,20 +60,6 @@
                 "operator": "!=",
                 "value": "template-gift.php"
             }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "template-leftimages.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "template-team.php"
-            }
         ]
     ],
     "menu_order": 0,
@@ -89,5 +70,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1530132581
+    "modified": 1530132474
 }
