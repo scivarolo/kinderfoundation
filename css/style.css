@@ -1944,6 +1944,7 @@ article.signature-gift {
 
 .sg__signature-image,
 .sg__signature-slider {
+  position: relative;
   margin: 0 auto; }
   .sg__signature-image img,
   .sg__signature-slider img {
@@ -2016,7 +2017,8 @@ article.signature-gift {
   .sg__text-image-row .row__image-block .single-image {
     height: 100%;
     min-height: 400px;
-    background-position: center center; }
+    background-position: center center;
+    position: relative; }
   @media (min-width: 720px) {
     .sg__text-image-row {
       -webkit-box-orient: horizontal;
@@ -2088,14 +2090,16 @@ article.signature-gift {
       right: 8%; }
       .block-carousel .owl-nav .owl-next::after {
         background-position: 105% 0; }
-  .block-carousel .owl-caption {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.54);
-    color: white;
-    padding: .6em 1em .4em 1em;
-    right: 0;
-    left: 0; }
+
+.owl-caption,
+.signature-image__caption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.54);
+  color: white;
+  padding: .6em 1em .4em 1em;
+  right: 0;
+  left: 0; }
 
 .sg__news .wrapper {
   width: 60rem;

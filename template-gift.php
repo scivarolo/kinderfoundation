@@ -38,7 +38,10 @@ get_header(); ?>
                 <?php $images = get_sub_field('images'); ?>
                 <?php if( count($images) == 1 ) : ?>
                   <div class="sg__signature-image">
-                    <img src="<?php $images[0]['sizes']['signature-slide']; ?>" />
+                    <img src="<?php echo $images[0]['sizes']['signature-slide']; ?>" />
+                    <?php if($images[0]['caption']): ?>
+                      <span class="signature-image__caption"><?php echo $images[0]['caption']; ?></span>
+                    <?php endif; ?>
                   </div>
                 <?php elseif(count($images) > 1 ) : ?>
                   <div class="sg__signature-slider">
@@ -93,6 +96,9 @@ get_header(); ?>
                     <?php $images = get_sub_field('images'); ?>
                     <?php if(count($images) == 1) : ?>
                       <div class="single-image" style="background: url('<?= $images[0]["sizes"]["large"]; ?>'); background-size: cover cover;">
+                        <?php if($images[0]['caption']): ?>
+                          <span class="signature-image__caption"><?php echo $images[0]['caption']; ?></span>
+                        <?php endif; ?>
                       </div>
 
                     <?php elseif(count($images) > 1 ) : ?>

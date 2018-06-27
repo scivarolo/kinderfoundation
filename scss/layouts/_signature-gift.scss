@@ -38,6 +38,7 @@ article.signature-gift {
 
 .sg__signature-image,
 .sg__signature-slider {
+  position: relative;
   margin: 0 auto;
   img {
     width: 100%;
@@ -112,6 +113,7 @@ article.signature-gift {
       height: 100%;
       min-height: 400px;
       background-position: center center;
+      position: relative;
     }
   }
   @media (min-width: 720px) {
@@ -195,17 +197,18 @@ article.signature-gift {
       }
     }
   }
-  .owl-caption {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.54);
-    color: white;
-    padding: .6em 1em .4em 1em;
-    right: 0;
-    left: 0;
-  }
 }
 
+.owl-caption,
+.signature-image__caption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.54);
+  color: white;
+  padding: .6em 1em .4em 1em;
+  right: 0;
+  left: 0;
+}
 
 .sg__news .wrapper {
   width: 60rem;
