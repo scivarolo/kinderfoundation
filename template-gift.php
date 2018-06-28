@@ -148,9 +148,8 @@ get_header(); ?>
                   'tax_query' => array(
                     array(
                         'taxonomy' => 'organization',
-                        'field' => 'slug',
-                        'terms' => $terms,
-                        'operator' => 'OR'
+                        'field' => 'term_id',
+                        'terms' => $terms
                     )
                   )
                 );
@@ -159,9 +158,9 @@ get_header(); ?>
                   <?php $post_type = get_post_type(); ?>
                   <?php if($post_type == 'blog') { $url = get_the_permalink(); } else { $url = get_field('source_url', get_the_id()); } ?>
                   <li>
-                    <span class="widget-post-date"><?php the_date(); ?></span>
+                    <span class="widget-post-date"><?php the_time(get_option('date_format')); ?></span>
                     <a class="widget-post-link" href="<?= $url ?>"><?php the_title(); ?></a>
-                    <?php if($post_type == 'post'): ?>
+                    <?php if($post_type == 'post' && get_field('source_name', get_the_ID()) ): ?>
                       <span class="source">&mdash;<?php the_field('source_name', get_the_id()); ?></span>
                     <?php endif; ?>
                   </li>
