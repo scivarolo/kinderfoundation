@@ -18,10 +18,15 @@ jQuery(document).ready(function() {
     nav: true,
     dots: false
   });
-
-  jQuery('.entry-slippry').slippry({
-    pager: false,
-    transition: 'fade'
+  jQuery('.sg__signature-slider').owlCarousel({
+    items: 1,
+    loop: true,
+    animateOut: 'fadeOut',
+    autoplay: true,
+    lazyLoad: true,
+    lazyLoadEager: 1,
+    nav: true,
+    dots: false
   });
 
 });

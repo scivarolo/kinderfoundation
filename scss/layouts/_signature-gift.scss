@@ -134,7 +134,6 @@ article.signature-gift {
 }
 
 .block-carousel {
-  position:relative;
   height: 100%;
   min-height: 300px;
   div:not(.owl-controls) {
@@ -145,9 +144,15 @@ article.signature-gift {
     max-height: inherit;
     min-height: 300px;
   }
+}
+
+.block-carousel,
+.sg__signature-slider {
+  position:relative;
   .owl-nav {
     position: absolute;
     top: 0;
+    bottom: 0;
     width: 100%;
     &:hover .owl-prev,
     &:hover .owl-next {
@@ -183,15 +188,14 @@ article.signature-gift {
         margin-left: -1.2em;
       }
     }
-
     .owl-prev {
-      left: 8%;
+      left: 5%;
       &::after {
         background-position: -5% 0;
       }
     }
     .owl-next {
-      right: 8%;
+      right: 5%;
       &::after {
         background-position: 105% 0;
       }

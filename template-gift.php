@@ -44,18 +44,19 @@ get_header(); ?>
                     <?php endif; ?>
                   </div>
                 <?php elseif(count($images) > 1 ) : ?>
-                  <div class="sg__signature-slider">
-              	    <ul class="entry-slippry">
+                  <div class="sg__signature-slider owl-carousel">
               	      <?php foreach( $images as $image ) : ?>
-              	        <li>
-              	          <img src="<?php echo $image['sizes']['signature-slide']; ?>" title="<?php echo $image['caption']; ?>" alt="<?php echo $image['alt']; ?>">
-              	        </li>
+                        <div class="owl-slide">
+                          <img class="owl-lazy" data-src="<?php echo $image['sizes']['signature-slide']; ?>" />
+                          <?php if($image['caption']): ?>
+                            <span class="owl-caption"><?php echo $image['caption']; ?></span>
+                          <?php endif; ?>
+                        </div>
             	        <?php endforeach; ?>
 
               	    </ul>
                   </div>
                 <?php endif; ?>
-
 
               <?php elseif( get_row_layout() == 'text_block' ) : ?>
 
