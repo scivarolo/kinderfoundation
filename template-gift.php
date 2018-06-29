@@ -96,7 +96,7 @@ get_header(); ?>
                   <div class="row__image-block">
                     <?php $images = get_sub_field('images'); ?>
                     <?php if(count($images) == 1) : ?>
-                      <div class="single-image" style="background: url('<?= $images[0]["sizes"]["large"]; ?>'); background-size: cover cover;">
+                      <div class="single-image" style="background: url('<?= $images[0]["sizes"]["large"]; ?>'); background-size: cover; background-position: center;">
                         <?php if($images[0]['caption']): ?>
                           <span class="signature-image__caption"><?php echo $images[0]['caption']; ?></span>
                         <?php endif; ?>
