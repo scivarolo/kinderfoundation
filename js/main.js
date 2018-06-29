@@ -29,4 +29,9 @@ jQuery(document).ready(function() {
     dots: false
   });
 
+  jQuery('.entry-slippry').slippry({
+    pager: false,
+    transition: 'fade'
+  });
+
 });
