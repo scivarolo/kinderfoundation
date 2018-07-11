@@ -1939,8 +1939,11 @@ article.signature-gift {
 .sg__news .wrapper {
   max-width: 90%; }
 
-.sg__entry-content > div:nth-of-type(even) {
+.sg__entry-content > div:nth-child(even) {
   background-color: rgba(128, 126, 130, 0.05); }
+
+.sg__entry-content > div:nth-child(odd) {
+  background-color: none; }
 
 .sg__signature-image,
 .sg__signature-slider {
@@ -1952,7 +1955,6 @@ article.signature-gift {
     display: block; }
 
 .sg__text-block {
-  background-color: rgba(128, 126, 130, 0.05);
   padding: 4rem 1rem; }
   .sg__text-block .wrapper {
     width: 60rem;

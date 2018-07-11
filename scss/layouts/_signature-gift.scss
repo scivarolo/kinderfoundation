@@ -29,8 +29,11 @@ article.signature-gift {
 }
 
 .sg__entry-content {
-  > div:nth-of-type(even) {
+  > div:nth-child(even) {
     background-color: rgba($kinder-gray, .05);
+  }
+  > div:nth-child(odd) {
+    background-color: none;
   }
 }
 
@@ -51,7 +54,6 @@ article.signature-gift {
     width: 60rem;
     margin: 0 auto;
   }
-  background-color: rgba($kinder-gray, .05);
   padding: 4rem 1rem;
 }
 
