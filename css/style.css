@@ -523,7 +523,7 @@ textarea {
   font-family: "Anivers", sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-font-smoothing: subpixel-antialiased; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -534,18 +534,17 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-bottom: .75em; }
 
-@media (min-width: 1000px) {
-  .site-content p,
-  .entry-content {
-    font-size: 17px;
-    font-size: 1.0625rem;
-    line-height: 1.6; } }
-
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .site-content p,
   .entry-content {
     font-size: 18px;
     font-size: 1.125rem; } }
+
+@media (min-width: 1200px) {
+  .site-content p,
+  .entry-content {
+    font-size: 20px;
+    font-size: 1.25rem; } }
 
 b,
 strong {
@@ -1932,9 +1931,13 @@ article.signature-gift {
   .sg__header .sg__introduction {
     margin-top: 2rem; }
     .sg__header .sg__introduction p {
-      font-size: 28px;
-      font-size: 1.75rem;
+      font-size: 21px;
+      font-size: 1.3125rem;
       font-family: "Bitter", serif; }
+      @media (min-width: 800px) {
+        .sg__header .sg__introduction p {
+          font-size: 28px;
+          font-size: 1.75rem; } }
 
 .sg__header,
 .sg__signature-image,

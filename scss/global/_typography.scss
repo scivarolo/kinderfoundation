@@ -6,7 +6,7 @@ textarea {
 	color: $kinder-gray;
 	font-family: $sans-serif;
 	@include font-size(1.6);
-	line-height: 1.5;
+	line-height: 1.6;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -23,12 +23,11 @@ p {
 
 .site-content p,
 .entry-content {
-  @media (min-width: 1000px) {
-    @include font-size(1.7);
-    line-height: 1.6;
+  @media (min-width: 900px) {
+    @include font-size(1.8);
   }
   @media(min-width: 1200px) {
-    @include font-size(1.8);
+    @include font-size(2);
   }
 }
 
