@@ -157,12 +157,23 @@ get_header(); ?>
                 $query = new WP_Query($args);
                 while($query->have_posts() ) : $query->the_post(); ?>
                   <?php $post_type = get_post_type(); ?>
-                  <?php if($post_type == 'blog') { $url = get_the_permalink(); } else { $url = get_field('source_url', get_the_id()); } ?>
+                  <?php if($post_type == 'blog') { 
+                    $url = get_the_permalink();
+                    $label = 'Blog Post'; 
+                  } else {
+                    $url = get_field('source_url', get_the_id());
+                  } 
+                  if( in_category( 'Press Release' ) ) {
+                    $label = 'Press Release';
+                  }
+                  ?>
                   <li>
                     <span class="widget-post-date"><?php the_time(get_option('date_format')); ?></span>
-                    <a class="widget-post-link" href="<?= $url ?>"><?php the_title(); ?></a>
+                    <a class="widget-post-link" href="<?= $url ?>" <?php if($post_type != 'blog') { echo 'target="_blank"'; } ?>><?php the_title(); ?></a>
                     <?php if($post_type == 'post' && get_field('source_name', get_the_ID()) ): ?>
                       <span class="source">&mdash;<?php the_field('source_name', get_the_id()); ?></span>
+                    <?php elseif( $label ) : ?>
+                      <span class="source">&mdash;<?php echo $label; ?></span>
                     <?php endif; ?>
                   </li>
                 <?php endwhile;

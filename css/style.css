@@ -2143,8 +2143,6 @@ article.signature-gift {
     -webkit-column-break-inside: avoid;
             break-inside: avoid-column;
     margin-bottom: 0.65rem; }
-  .sg__news-links .source {
-    display: block; }
 
 /*------- News -------*/
 .blog .content-area,
