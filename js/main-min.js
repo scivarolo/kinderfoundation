@@ -36,4 +36,9 @@ jQuery(document).ready(function() {
 
 });
 
+var videoiFrames = document.querySelectorAll('.sg__text-block iframe');
+
+videoiFrames.forEach(function(videoiFrame){
+  videoiFrame.parentElement.style.textAlign = "center";
+});
 
