@@ -66,6 +66,12 @@ get_header(); ?>
                       <h2 class="sg__section-heading"><?php the_sub_field('heading'); ?></h2>
                     <?php endif; ?>
                     <?php the_sub_field('text'); ?>
+                    <?php if(get_sub_field('show_url')) : ?>
+                      <span class="organization-url">
+                        <a href="<?php the_sub_field('url'); ?>" target="_blank"><?php the_sub_field('label'); ?></a>
+                      </span>
+                    <?php endif; ?>
+                    
                   </div>
                 </div>
 
