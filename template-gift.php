@@ -153,6 +153,7 @@ get_header(); ?>
                 <?php $tags = get_field('news_press_tags'); ?>
                 <?php $args = array (
                   'post_type' => array('post', 'blog'),
+                  'posts_per_page' => 16,
                   'tax_query' => array(
                     'relation' => 'OR',
                     array(
