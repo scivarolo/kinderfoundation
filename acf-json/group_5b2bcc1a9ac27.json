@@ -492,18 +492,40 @@
         },
         {
             "key": "field_5b2bd2a14035a",
-            "label": "News & Press",
+            "label": "News & Press Organization",
             "name": "news_press",
             "type": "taxonomy",
             "instructions": "You can choose one or more. This uses the Organization tags from posts.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "taxonomy": "organization",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_5b4e48e5e0bda",
+            "label": "News & Press Tag",
+            "name": "news_press_tags",
+            "type": "taxonomy",
+            "instructions": "If you need to add a <strong>tag<\/strong> to the query add it here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "post_tag",
             "field_type": "multi_select",
             "allow_null": 0,
             "add_term": 0,
@@ -532,5 +554,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531346283
+    "modified": 1531857418
 }

@@ -150,13 +150,20 @@ get_header(); ?>
                 <h2 class="sg__section-heading">News & Press</h2>
                 <ul class="sg__news-links">
                 <?php $terms = get_field('news_press'); ?>
+                <?php $tags = get_field('news_press_tags'); ?>
                 <?php $args = array (
                   'post_type' => array('post', 'blog'),
                   'tax_query' => array(
+                    'relation' => 'OR',
                     array(
-                        'taxonomy' => 'organization',
-                        'field' => 'term_id',
-                        'terms' => $terms
+                      'taxonomy' => 'organization',
+                      'field' => 'term_id',
+                      'terms' => $terms
+                    ),
+                    array(
+                      'taxonomy' => 'post_tag',
+                      'field' => 'term_id',
+                      'terms' => $tags
                     )
                   )
                 );
